@@ -1,5 +1,39 @@
 import Navbar from '@/components/ui/Navbar';
 import React from 'react';
+import {
+  Building2,
+  Gem,
+  Handshake,
+  Globe2
+} from "lucide-react";
+import {
+  Landmark,
+  Palette,
+  Users,
+  ShoppingBag,
+  PlaneTakeoff,
+} from "lucide-react";
+
+const milestones = [
+  {
+    icon: <Landmark className="w-10 h-7 text-[#a67c2a]" />,
+    text: "Rooted in Amber, Jaipur — preserving the rich legacy of Rajasthani craftsmanship.",
+  },
+  {
+    icon: <Palette className="w-10 h-7 text-[#a67c2a]" />,
+    text: "Masters of handwork in wood, marble, blue pottery, textiles, and spiritual jewelry.",
+  },
+  {
+    icon: <Users className="w-10 h-7 text-[#a67c2a]" />,
+    text: "Empowering rural artisans and women through sustainable cottage industry models.",
+  },
+  {
+    icon: <ShoppingBag className="w-10 h-7 text-[#a67c2a]" />,
+    text: "Offering handcrafted blankets, palmistry-inspired ornaments, home decor, and more.",
+  },
+  
+];
+
 
 const Home = () => {
   return (
@@ -11,7 +45,8 @@ const Home = () => {
       backgroundPosition: 'center',
       fontFamily: "'Merriweather', serif"
     }}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto md:mx-0">
+      <div className="hidden md:grid grid-cols-2 gap-6 max-w-xl mx-auto md:mx-0">
+
         {[
           {
             alt: "Wooden box with camel painting on top placed on a white marble table",
@@ -77,7 +112,89 @@ const Home = () => {
       </div>
      
     </section>
+
+    <div className="relative overflow-x-hidden font-[Merriweather] bg-[#dbdcc6]">
+      {/* Top Scallop */}
+    
+
+      <div className="max-w-[90rem] mx-auto px-6 md:px-12 lg:px-20 pt-20 md:pt-24 lg:pt-28 pb-16">
+        <div className="flex flex-col md:flex-row md:items-start md:space-x-44">
+          {/* Left Column */}
+          <div className="md:w-1/2 max-w-lg">
+  <h1 className="text-4xl md:text-5xl leading-tight text-[#1a1a1a] mb-3 font-[Great_Vibes]">
+    Echoes of Amber,
+    <br /> Handcrafted with Pride
+  </h1>
+   <div className=" mb-6">
+          <svg aria-hidden="true" width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
+              stroke="#d48806"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+                  </div>
+  <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed max-w-md">
+    Nestled in the historic town of Amber, Jaipur, Rajasthan Small Scale Cottage Industries carries forward a timeless tradition of handcrafted excellence. Rooted in royal legacy and nurtured by skilled local artisans, the initiative celebrates Rajasthan’s iconic crafts — from intricate marble and wood work to traditional blue pottery and textile arts. Every creation reflects the soul of Amber: authentic, sustainable, and steeped in heritage.
+  </p>
+  
+</div>
+
+
+          {/* Right Column */}
+          <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <div className="relative w-full max-w-xl aspect-video bg-[#191919] flex items-center justify-center cursor-pointer">
+              <img
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://storage.googleapis.com/a1aa/image/66f90ede-a3ce-4057-a037-2742915a78db.jpg"
+                alt="Black video placeholder"
+              />
+              <div className="relative z-10 w-16 h-16 border border-gray-700 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Milestones Section */}
+        <div className="mt-20 bg-[#fff3e0] border border-[#dba14a] rounded-3xl py-10 px-6 md:px-16 max-w-6xl mx-auto">
+          <h2 className=" justify-center text-center text-2xl md:text-3xl font-serif text-[#2a1a00] mb-2">Key Milestones</h2>
+          
+          <div className="flex justify-center mb-6">
+           <svg aria-hidden="true" width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
+              stroke="#d48806"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-14 text-center text-[#a67c2a] text-sm md:text-base max-w-5xl mx-auto">
+      {milestones.map((item, index) => (
+        <div key={index} className="flex flex-col items-center space-y-2 px-2">
+          {item.icon}
+          <p className="whitespace-pre-line">{item.text}</p>
+        </div>
+      ))}
     </div>
+        </div>
+
+        {/* <p className="mt-10 max-w-4xl mx-auto italic text-[#3a3a3a] text-sm md:text-base">
+          <em>
+            Today, under the leadership of Mr. Manoj Kataria, we continue to innovate, with a family of 500 artisans dedicated to creating world-class handicrafts.
+          </em>
+        </p> */}
+      </div>
+    </div>
+    </div>
+    
   );
 };
 

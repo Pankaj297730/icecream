@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Optional: You can also use SVGs
+import { Menu, X } from 'lucide-react'; // Using Lucide icons
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const navItems = ['Home', 'About', 'Products', 'Gallery', 'Contact'];
 
   return (
-    <nav className="bg-[#fffaf0] text-black font-serif ">
+    <nav className="bg-[#fffaf0] text-black font-serif">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold tracking-wide font-serif">
@@ -15,12 +14,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-6 font-medium text-sm uppercase tracking-wide">
+        <ul className="hidden md:flex gap-6 font-medium text-[0.9rem] uppercase tracking-wide">
           {navItems.map((item, index) => (
             <li key={index}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="hover:text-[#ffe8c6] transition-colors duration-200"
+                className="relative text-black transition-all duration-300 hover:text-[#bf7500] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#bf7500] after:transition-all after:duration-300"
               >
                 {item}
               </a>
@@ -39,22 +38,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav Dropdown */}
-      {isOpen && (
-        <div className="md:hidden px-6 pb-4">
-          <ul className="flex flex-col gap-3 text-sm font-medium uppercase tracking-wide">
-            {navItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="block py-1 border-b border-white/20 hover:text-[#ffe8c6]"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        } px-6`}
+      >
+        <ul className="flex flex-col gap-3 py-4 text-sm font-medium uppercase tracking-wide">
+          {navItems.map((item, index) => (
+            <li
+              key={index}
+              className={`transition-opacity transform duration-300 delay-${index * 75} ${
+                isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+              }`}
+            >
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="block py-1 border-b border-white/20 hover:text-[#bf7500]"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
