@@ -66,8 +66,9 @@ export default {
 		  },
 		},
 		fontFamily: {
-		  rubik: ['Rubik', 'sans-serif'], // Add Rubik font family here
-		},
+        serif: ['Merriweather', 'serif'],
+        greatvibes: ['"Great Vibes"', 'cursive'],
+      },
 		keyframes: {
 		  'accordion-down': {
 			from: {

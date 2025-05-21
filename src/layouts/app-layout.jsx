@@ -1,13 +1,10 @@
-import Footer from "@/components/ui/Footer";
-import Aboutus from "@/pages/Aboutus";
-import { Outlet } from "react-router-dom";
+import Home from "@/pages/Home";
 const AppLayout = () => {
 
-
-  return (
+return (
       <main>
-        <Aboutus/>
-        <Footer/>
+        <Home/>
+        {/* <Footer/> */}
            </main> 
   ); 
 };
