@@ -1,34 +1,34 @@
 import Navbar from '@/components/ui/Navbar';
-import React from 'react';
+
 import {
-  Building2,
-  Gem,
+
   Handshake,
-  Globe2
+
 } from "lucide-react";
 import {
   Landmark,
   Palette,
   Users,
   ShoppingBag,
-  PlaneTakeoff,
+  
+  Paintbrush,Leaf, Globe, BadgeCheck 
 } from "lucide-react";
 
 const milestones = [
   {
-    icon: <Landmark className="w-10 h-7 text-[#a67c2a]" />,
+    icon: <Landmark className="w-10 h-7 text-[#bf7500]" />,
     text: "Rooted in Amber, Jaipur — preserving the rich legacy of Rajasthani craftsmanship.",
   },
   {
-    icon: <Palette className="w-10 h-7 text-[#a67c2a]" />,
+    icon: <Palette className="w-10 h-7 text-[#bf7500]" />,
     text: "Masters of handwork in wood, marble, blue pottery, textiles, and spiritual jewelry.",
   },
   {
-    icon: <Users className="w-10 h-7 text-[#a67c2a]" />,
+    icon: <Users className="w-10 h-7 text-[#bf7500]" />,
     text: "Empowering rural artisans and women through sustainable cottage industry models.",
   },
   {
-    icon: <ShoppingBag className="w-10 h-7 text-[#a67c2a]" />,
+    icon: <ShoppingBag className="w-10 h-7 text-[#bf7500]" />,
     text: "Offering handcrafted blankets, palmistry-inspired ornaments, home decor, and more.",
   },
   
@@ -45,36 +45,38 @@ const Home = () => {
       backgroundPosition: 'center',
       fontFamily: "'Merriweather', serif"
     }}>
-      <div className="hidden md:grid grid-cols-2 gap-6 max-w-xl mx-auto md:mx-0">
+      <div className="hidden md:grid grid-cols-2 gap-x-24 gap-y-10 max-w-2xl mx-auto md:mx-0 shadow-sm">
+  {[
+    {
+      alt: "Wooden box with camel painting on top placed on a white marble table",
+      src: "public/DSC_5568.JPG",
+    },
+    {
+      alt: "Square decorative box with colorful peacock design on a white marble table",
+      src: "public/DSC_5548.JPG",
+    },
+    {
+      alt: "Traditional wooden statue of a man wearing a turban standing on a white marble table",
+      src: "public/DSC_5523.JPG",
+    },
+    {
+      alt: "Rectangular decorative tray with intricate patterns placed on a white marble table",
+      src: "public/DSC_5514.JPG",
+    },
+  ].map((img, i) => (
+    <div
+      key={i}
+      className="w-[350px] h-[300px] overflow-hidden rounded shadow-md mx-auto object-cover"
+    >
+      <img
+        alt={img.alt}
+        src={img.src}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  ))}
+</div>
 
-        {[
-          {
-            alt: "Wooden box with camel painting on top placed on a white marble table",
-            src: "https://storage.googleapis.com/a1aa/image/8aa64e47-f8a3-4e2c-3560-fe1dea221db9.jpg"
-          },
-          {
-            alt: "Square decorative box with colorful peacock design on a white marble table",
-            src: "https://storage.googleapis.com/a1aa/image/f6d93729-906b-4bef-2f9b-12b4a15c9e55.jpg"
-          },
-          {
-            alt: "Traditional wooden statue of a man wearing a turban standing on a white marble table",
-            src: "https://storage.googleapis.com/a1aa/image/97610ccb-8e04-4f5e-f365-ffd85199e85f.jpg"
-          },
-          {
-            alt: "Rectangular decorative tray with intricate patterns placed on a white marble table",
-            src: "https://storage.googleapis.com/a1aa/image/0ea61435-df4a-448c-56b1-9da3ab77cc90.jpg"
-          }
-        ].map((img, i) => (
-          <img
-            key={i}
-            alt={img.alt}
-            src={img.src}
-            width="320"
-            height="320"
-            className="w-full object-cover"
-          />
-        ))}
-      </div>
 
       <div className="mt-10 md:mt-0 md:absolute md:top-1/2 md:right-12 md:-translate-y-1/2 max-w-2xl text-center md:text-right">
         <h1 className="font-serif text-4xl md:text-5xl text-black mb-3" style={{ letterSpacing: '0.01em' }}>
@@ -136,7 +138,7 @@ const Home = () => {
             />
           </svg>
                   </div>
-  <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed max-w-md">
+  <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed max-w-2xl">
     Nestled in the historic town of Amber, Jaipur, Rajasthan Small Scale Cottage Industries carries forward a timeless tradition of handcrafted excellence. Rooted in royal legacy and nurtured by skilled local artisans, the initiative celebrates Rajasthan’s iconic crafts — from intricate marble and wood work to traditional blue pottery and textile arts. Every creation reflects the soul of Amber: authentic, sustainable, and steeped in heritage.
   </p>
   
@@ -176,7 +178,7 @@ const Home = () => {
           </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-14 text-center text-[#a67c2a] text-sm md:text-base max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-14 text-center text-[#bf7500] text-sm md:text-base max-w-5xl mx-auto">
       {milestones.map((item, index) => (
         <div key={index} className="flex flex-col items-center space-y-2 px-2">
           {item.icon}
@@ -193,6 +195,116 @@ const Home = () => {
         </p> */}
       </div>
     </div>
+    <section className="bg-[#fff8f0] py-16 px-4 md:px-8">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-[#bf7500] font-serif mb-4">
+      A Legacy of Craftsmanship
+    </h2>
+     <div className="flex justify-center mb-6">
+           <svg aria-hidden="true" width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
+              stroke="#d48806"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          </div>
+    <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed">
+      Rajasthan, the land of royals and vibrant colors, has always been known
+      for its intricate and soulful handicrafts. From carved wooden furniture
+      and block-printed textiles to marble sculptures and blue pottery, every
+      piece reflects the history and spirit of the desert state. Our artisans
+      carry forward these ancient traditions passed down through generations—
+      each product tells a story of culture, passion, and precision.
+    </p>
+  </div>
+
+      <div className="mt-20 bg-[#fff3e0] border border-[#dba14a] rounded-3xl py-10 px-6 md:px-16 max-w-6xl mx-auto">
+          {/* <h2 className=" justify-center text-center text-2xl md:text-3xl font-serif text-[#2a1a00] mb-2">Key Milestones</h2> */}
+          
+          <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#bf7500] mb-4 font-serif">
+          What Makes Us Special
+        </h2>
+          <div className="flex justify-center mb-6">
+           <svg aria-hidden="true" width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
+              stroke="#d48806"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left font-serif">
+          <div className="flex items-start gap-4">
+            <Paintbrush className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Authentic Craftsmanship</h3>
+              <p className="text-sm">
+                Handmade by artisans in Amber, Jaipur—each piece preserves tradition.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <Handshake className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Empowering Communities</h3>
+              <p className="text-sm">
+                Supporting rural livelihoods and promoting fair trade craftsmanship.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <Landmark className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Rooted in Heritage</h3>
+              <p className="text-sm">
+                Designs inspired by royal palaces and age-old Rajasthani traditions.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <Leaf className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Eco-Friendly</h3>
+              <p className="text-sm">
+                Sustainable materials and natural dyes with minimal environmental impact.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <Globe className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Global Reach</h3>
+              <p className="text-sm">
+                Serving customers in 20+ countries with our export-quality products.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <BadgeCheck className="w-8 h-8 text-[#bf7500]" />
+            <div>
+              <h3 className="text-lg font-semibold">Trusted Quality</h3>
+              <p className="text-sm">
+                Each item is carefully crafted and quality-checked for excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+    </section>
     </div>
     
   );
