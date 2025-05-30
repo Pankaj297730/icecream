@@ -1,23 +1,3 @@
-import { Landmark, Palette, Users, ShoppingBag } from "lucide-react";
-
-const milestones = [
-  {
-    icon: <Landmark className="w-10 h-7 text-[#bf7500]" />,
-    text: "Rooted in Amber, Jaipur — preserving the rich legacy of Rajasthani craftsmanship.",
-  },
-  {
-    icon: <Palette className="w-10 h-7 text-[#bf7500]" />,
-    text: "Masters of handwork in wood, marble, blue pottery, textiles, and spiritual jewelry.",
-  },
-  {
-    icon: <Users className="w-10 h-7 text-[#bf7500]" />,
-    text: "Empowering rural artisans and women through sustainable cottage industry models.",
-  },
-  {
-    icon: <ShoppingBag className="w-10 h-7 text-[#bf7500]" />,
-    text: "Offering handcrafted blankets, palmistry-inspired ornaments, home decor, and more.",
-  },
-];
 
 const AmberSection = () => {
   return (

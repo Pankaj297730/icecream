@@ -7,7 +7,7 @@ import Contactus from './pages/Contactus';
 
 const router = createBrowserRouter([
   {
-    path: '/home', // Main path
+    path: '/', // Main path
     element: <AppLayout />, // Main layout or component
   },
   {
