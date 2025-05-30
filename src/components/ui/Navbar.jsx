@@ -1,36 +1,39 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Home", "About Us", "Products", "Gallery", "Contact"];
+  const navItems = ["Home", "About Us", "Products", "Gallery", "Contact Us"];
 
   return (
-    <header className="bg-[#fffaf0] text-black font-serif shadow-lg sticky top-0 z-50">
+    <header className="bg-[#f9f2ea] text-black font-serif shadow-lg sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-6 py-0 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center">
-          <img
-            src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1747993367/RSSCI_Logo_Final-03_vntx4w.webp"
-            alt="RSSCI Logo"
-            className="h-20 w-auto object-contain"
-            loading="lazy"
-          />
-        </a>
+       <Link to="/home" className="flex items-center">
+  <img
+    src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1748505666/RSSCI_Logo_Final_blacl-03_1_h5h08x.png"
+    alt="RSSCI Logo"
+    className="h-20 w-auto object-contain"
+    loading="lazy"
+  />
+</Link>
+
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-6 text-sm font-medium uppercase tracking-wide">
-          {navItems.map((item, index) => (
-            <li key={index}>
-              <a
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className="relative text-black transition-all duration-300 hover:text-[#bf7500] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#bf7500] after:transition-all after:duration-300"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
+  {navItems.map((item, index) => (
+    <li key={index}>
+      <Link
+        to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+        className="relative text-black transition-all duration-300 hover:text-[#bf7500] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#bf7500] after:transition-all after:duration-300"
+      >
+        {item}
+      </Link>
+    </li>
+  ))}
+</ul>
+
 
         {/* Mobile Menu Button */}
         <button

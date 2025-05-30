@@ -3,16 +3,22 @@ import AppLayout from './layouts/app-layout'; // Main app layout or page
 
 import './App.css';
 import Aboutus from './pages/Aboutus';
+import Contactus from './pages/Contactus';
 
 const router = createBrowserRouter([
   {
-    path: '/', // Main path
+    path: '/home', // Main path
     element: <AppLayout />, // Main layout or component
   },
   {
-    path: '/aboutus', // Add the signup route
+    path: '/about-us', // Add the signup route
     element: <Aboutus />, // SignUp page component to render
   },
+  {
+    path: '/contact-us', // Add the signup route
+    element: <Contactus />, // SignUp page component to render
+  },
+  
 ]);
 
 function App() {
