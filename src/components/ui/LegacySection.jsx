@@ -10,9 +10,9 @@ import {
 const LegacySection = () => {
   return (
     <div>
-        <section className="bg-[#f9f2ea] pt-16 px-4 md:px-8">
+        <section className="bg-[#f9f2ea] pt-16 px-4 md:px-8 text-black ">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-4xl font-bold text-[#bf7500] font-serif mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-black font-serif mb-4">
             A Legacy of Craftsmanship
           </h2>
           <div className="flex justify-center mb-6">
@@ -33,7 +33,7 @@ const LegacySection = () => {
               />
             </svg>
           </div>
-          <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed">
+          <p className="text-black text-base md:text-lg leading-relaxed">
             Rajasthan, the land of royals and vibrant colors, has always been
             known for its intricate and soulful handicrafts. From carved wooden
             furniture and block-printed textiles to marble sculptures and blue
@@ -44,11 +44,11 @@ const LegacySection = () => {
           </p>
         </div>
 
-        <div className="mt-20 bg-[#fff3e0] border border-[#dba14a] rounded-3xl py-10 px-6 md:px-16 max-w-6xl mx-auto">
+        <div className="mt-20 bg-[#fff3e0] border border-[#3f422d] rounded-3xl py-10 px-6 md:px-16 max-w-6xl mx-auto">
           {/* <h2 className=" justify-center text-center text-2xl md:text-3xl font-serif text-[#2a1a00] mb-2">Key Milestones</h2> */}
 
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl md:text-4xl font-bold text-[#bf7500] mb-4 font-serif">
+            <h2 className="text-4xl md:text-4xl font-bold text-black mb-4 font-serif">
               What Makes Us Special
             </h2>
             <div className="flex justify-center mb-6">
@@ -72,7 +72,7 @@ const LegacySection = () => {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left font-serif">
               <div className="flex items-start gap-4">
-                <Paintbrush className="w-8 h-8 text-[#bf7500]" />
+                <Paintbrush className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">
                     Authentic Craftsmanship
@@ -85,7 +85,7 @@ const LegacySection = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Handshake className="w-8 h-8 text-[#bf7500]" />
+                <Handshake className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">
                     Empowering Communities
@@ -98,7 +98,7 @@ const LegacySection = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Landmark className="w-8 h-8 text-[#bf7500]" />
+                <Landmark className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">Rooted in Heritage</h3>
                   <p className="text-sm">
@@ -109,7 +109,7 @@ const LegacySection = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Leaf className="w-8 h-8 text-[#bf7500]" />
+                <Leaf className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">Eco-Friendly</h3>
                   <p className="text-sm">
@@ -120,7 +120,7 @@ const LegacySection = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <Globe className="w-8 h-8 text-[#bf7500]" />
+                <Globe className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">Global Reach</h3>
                   <p className="text-sm">
@@ -131,7 +131,7 @@ const LegacySection = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <BadgeCheck className="w-8 h-8 text-[#bf7500]" />
+                <BadgeCheck className="w-8 h-8 text-black" />
                 <div>
                   <h3 className="text-lg font-semibold">Trusted Quality</h3>
                   <p className="text-sm">

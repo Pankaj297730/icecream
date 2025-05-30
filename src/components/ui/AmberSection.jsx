@@ -9,7 +9,7 @@ const AmberSection = () => {
           <div className="flex flex-col md:flex-row md:items-start md:space-x-44">
             {/* Left Column */}
             <div className="md:w-1/2 max-w-lg">
-              <h1 className="text-4xl md:text-5xl leading-tight text-[#1a1a1a] mb-3 font-[Great_Vibes]">
+              <h1 className="text-4xl md:text-5xl leading-tight text-black mb-3 font-[Great_Vibes]">
                 Echoes of Amber,
                 <br /> Handcrafted with Pride
               </h1>
@@ -31,7 +31,7 @@ const AmberSection = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[#2a2a2a] text-base md:text-lg leading-relaxed max-w-2xl">
+              <p className="text-black text-base md:text-lg leading-relaxed max-w-2xl">
                 Nestled in the historic town of Amber, Jaipur, Rajasthan Small
                 Scale Cottage Industries carries forward a timeless tradition of
                 handcrafted excellence. Rooted in royal legacy and nurtured by

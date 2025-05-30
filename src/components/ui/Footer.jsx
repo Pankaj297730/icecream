@@ -14,7 +14,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f7efe0] text-black px-6 sm:px-10 md:px-16 py-10 font-serif">
+    <footer className="bg-[#dbdcc6] text-black px-6 sm:px-10 md:px-16 py-10 font-serif">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12">
         {/* Left Section */}
         <div className="md:flex-1 max-w-xl">
