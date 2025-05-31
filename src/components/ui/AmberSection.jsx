@@ -1,61 +1,49 @@
+import React from "react";
+import leafImage from "/Illustrations_by__Agata_Wierzbicka-removebg-preview.png";
 
 const AmberSection = () => {
   return (
-    <div>
-      <div className="relative overflow-x-hidden font-[Merriweather] bg-[#dbdcc6]">
-        {/* Top Scallop */}
+    <section className="relative bg-[#DBD3C785] py-24 px-6 md:px-20 overflow-hidden">
+      {/* Right Leaf */}
+      <img
+        src={leafImage}
+        alt="right leaf"
+        className="absolute right-0 bottom-0 w-[350px] md:w-[500px] pointer-events-none select-none opacity-70"
+      />
 
-        <div className="max-w-[90rem] mx-auto px-6 md:px-12 lg:px-20 pt-20 md:pt-24 lg:pt-28 pb-16">
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-44">
-            {/* Left Column */}
-            <div className="md:w-1/2 max-w-lg">
-              <h1 className="text-4xl md:text-5xl leading-tight text-black mb-3 font-[Great_Vibes]">
-                Echoes of Amber,
-                <br /> Handcrafted with Pride
-              </h1>
-              <div className=" mb-6">
-                <svg
-                  aria-hidden="true"
-                  width="120"
-                  height="20"
-                  viewBox="0 0 120 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
-                    stroke="#d48806"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <p className="text-black text-base md:text-lg leading-relaxed max-w-2xl">
-                Nestled in the historic town of Amber, Jaipur, Rajasthan Small
-                Scale Cottage Industries carries forward a timeless tradition of
-                handcrafted excellence. Rooted in royal legacy and nurtured by
-                skilled local artisans.
-              </p>
-            </div>
+      {/* Overlay behind text for better readability */}
+      {/* <div className="absolute inset-0 bg-[#f9f1e7] bg-opacity-50 pointer-events-none"></div> */}
 
-            {/* Right Column */}
-            <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
-              <div className="relative w-full max-w-xl aspect-video bg-[#191919] rounded-sm shadow-md flex items-center justify-center cursor-pointer">
-                <img
-                  className="absolute inset-0 w-full h-full object-cover rounded-sm"
-                  src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1748506742/180_600_Indian_Handicrafts_Stock_Photos_Pictures_Royalty-Free_Images_-_iStock_drwlqy.jpg"
-                  alt="Black video placeholder"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-44">
+        {/* Left Text Content */}
+        <div className="max-w-2xl text-left">
+         <p className="text-base text-[#3f3f2f] mb-2 font-quicksand">Echoes of Amber</p>
+<h2 className="text-[#1c1c1c] font-serif  text-4xl md:text-5xl  font-semibold mb-6 md:leading-snug">
+  Handmade Stories, Crafted with Love
+</h2>
+
+          <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand">
+            Nestled in Amber, RSSCI is a vibrant showroom showcasing the finest handmade treasures. From exquisite jewelry and rich textiles to authentic cottage crafts, each piece tells a story of tradition and craftsmanship. Explore our collection and celebrate the beauty of Indian artisanship with every purchase.
+          </p>
+        </div>
+
+        {/* Right Stats */}
+        <div className="flex flex-col gap-14 text-[#1c1c1c] text-center mt-12 md:mt-0 md:text-left md:ml-20">
+          <div>
+            <p className="font-playfair text-[56px] leading-none font-semibold">
+              21<span className="align-super text-2xl">+</span>
+            </p>
+            <p className="text-xs tracking-widest uppercase font-quicksand mt-1">Years</p>
           </div>
-
-         
+          <div>
+            <p className="font-playfair text-[56px] leading-none font-semibold">200</p>
+            <p className="text-xs tracking-widest uppercase font-quicksand mt-1">
+              Indian Artisans
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

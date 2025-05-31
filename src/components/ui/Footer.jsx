@@ -4,6 +4,7 @@ import {
   FaYoutube,
   FaGoogle,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const socialIcons = [
   { icon: <FaInstagram size={18} />, label: "Instagram", url: "#" },
@@ -14,11 +15,11 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f7efe0] text-black px-6 sm:px-10 md:px-16 py-10 font-serif">
+    <footer className="bg-[#fffaf4] text-black px-6 sm:px-10 md:px-16 py-10">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12">
         {/* Left Section */}
         <div className="md:flex-1 max-w-xl">
-          <h2 className="text-[#bf7500] text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+          <h2 className="text-black text-2xl sm:text-3xl font-semibold mb-2 leading-tight font-serif">
             Stay Connected with Heritage
           </h2>
           <p className="text-sm sm:text-base mb-4">
@@ -34,7 +35,7 @@ const Footer = () => {
                 id="email"
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white text-black placeholder-gray-400 px-4 py-2 text-sm focus:outline-none"
+                className="bg-white text-black placeholder-gray-400 px-4 py-2 text-sm focus:outline-none border border-black"
                 required
               />
             </div>
@@ -45,7 +46,7 @@ const Footer = () => {
               <input
                 id="birthday"
                 type="date"
-                className="bg-white text-black px-4 py-2 text-sm focus:outline-none"
+                className="bg-white text-black px-4 py-2 text-sm focus:outline-none border border-black"
                 required
               />
             </div>
@@ -60,7 +61,7 @@ const Footer = () => {
 
           <p className="text-sm mt-4">
             By subscribing, you agree to receive emails about handcrafted Rajasthani products. See our{" "}
-            <a href="#" className="underline">Privacy Policy</a> and <a href="#" className="underline">Terms</a>.
+            <Link to="#" className="underline">Privacy Policy</Link> and <Link to="#" className="underline">Terms</Link>.
           </p>
           <p className="text-sm mt-1">*Required information</p>
         </div>
@@ -70,41 +71,41 @@ const Footer = () => {
           <div>
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Showroom</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Our Craftsmen</a></li>
-              <li><a href="#" className="hover:underline">Visit Amber Showroom</a></li>
+              <li><Link to="/about-us" className="hover:underline">About Us</Link></li>
+              <li><Link to="#" className="hover:underline">Our Craftsmen</Link></li>
+              <li><Link to="#" className="hover:underline">Visit Amber Showroom</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Customer Support</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">Contact Us</a></li>
-              <li><a href="#" className="hover:underline">FAQ</a></li>
+              <li><Link to="/contact-us" className="hover:underline">Contact Us</Link></li>
+              <li><Link to="#" className="hover:underline">FAQ</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Collections</h3>
             <ul className="space-y-2 ">
-              <li><a href="#" className="hover:underline">Handicrafts</a></li>
-              <li><a href="#" className="hover:underline">Textiles</a></li>
-              <li><a href="#" className="hover:underline">Jewelry</a></li>
-              <li><a href="#" className="hover:underline">Blankets</a></li>
+              <li><Link to="#" className="hover:underline">Handicrafts</Link></li>
+              <li><Link to="#" className="hover:underline">Textiles</Link></li>
+              <li><Link to="#" className="hover:underline">Jewelry</Link></li>
+              <li><Link to="#" className="hover:underline">Blankets</Link></li>
             </ul>
           </div>
 
           <div className="sm:hidden block mt-6">
             <div className="flex gap-4">
               {socialIcons.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={item.url}
+                  to={item.url}
                   aria-label={item.label}
                   className="bg-black border border-black rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition"
                 >
                   <span className="text-white">{item.icon}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -115,9 +116,9 @@ const Footer = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
         <div className="flex gap-4 mb-4 sm:mb-0">
-          <a href="#" className="hover:underline">Site Map</a>
-          <a href="#" className="hover:underline">Privacy</a>
-          <a href="#" className="hover:underline">Terms</a>
+          <Link to="#" className="hover:underline">Site Map</Link>
+          <Link to="#" className="hover:underline">Privacy</Link>
+          <Link to="#" className="hover:underline">Terms</Link>
         </div>
 
         <div className="flex gap-4 items-center">
@@ -125,14 +126,14 @@ const Footer = () => {
 
           <div className="hidden sm:flex gap-3 ml-4">
             {socialIcons.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={item.url}
+                to={item.url}
                 aria-label={item.label}
                 className="bg-black border border-black rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition"
               >
                 <span className="text-white">{item.icon}</span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,151 +1,130 @@
-import { Handshake } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
 import {
+  Handshake,
   Landmark,
-   Paintbrush,
+  Paintbrush,
   Leaf,
   Globe,
-  BadgeCheck,
 } from "lucide-react";
 
+const images = [
+  {
+    src: "https://storage.googleapis.com/a1aa/image/2be393c3-3c17-4009-a2a0-e2941f9d131e.jpg",
+    alt: "Handcrafted pouches and cases with traditional Indian prints",
+  },
+  {
+    src: "https://storage.googleapis.com/a1aa/image/daf35c23-015f-4770-c769-cd63f9d1061e.jpg",
+    alt: "Artisan carved wooden stamp with Indian motifs",
+  },
+  {
+    src: "https://storage.googleapis.com/a1aa/image/6bec6dc9-a7d9-4e0b-17f8-48a54174d1f1.jpg",
+    alt: "Skilled Indian woman crafting traditional art",
+  },
+];
+
+const legacyPoints = [
+  {
+    icon: Paintbrush,
+    title: "Timeless Artistry",
+    desc: "Each creation reflects generations of skilled artisanship, blending tradition with intricate handwork.",
+  },
+  {
+    icon: Handshake,
+    title: "Crafted with Purpose",
+    desc: "Empowering local artisans through fair trade, ethical practices, and sustainable livelihoods.",
+  },
+  {
+    icon: Landmark,
+    title: "Inspired by Royalty",
+    desc: "Designs echo the grandeur of Rajasthan’s palaces, forts, and age-old artistic legacy.",
+  },
+  {
+    icon: Leaf,
+    title: "Sustainably Made",
+    desc: "We use natural materials, eco-friendly dyes, and mindful methods that respect the Earth.",
+  },
+  {
+    icon: Globe,
+    title: "Celebrated Worldwide",
+    desc: "Our handcrafted treasures have found homes in over 25+ countries across the globe.",
+  },
+];
+
 const LegacySection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const intervalRef = useRef(null);
+  
+   
+  
+    // Auto-carousel
+    useEffect(() => {
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      }, 4000); // 4 seconds
+  
+      return () => clearInterval(intervalRef.current);
+    }, []);
+
   return (
-    <div>
-        <section className="bg-[#f9f2ea] pt-16 px-4 md:px-8 text-black ">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-4xl font-bold text-black font-serif mb-4">
+  <section className="relative bg-[#f9f2ea] py-24 px-6 md:px-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-44 items-start">
+        {/* Left: Text + Icons */}
+        <div>
+          <p className="text-base text-[#3f3f2f] mb-2 font-quicksand">The Soul of Craft</p>
+         <h2 className="text-[#1c1c1c] text-4xl md:text-5xl font-serif font-semibold mb-6 md:leading-snug ">
             A Legacy of Craftsmanship
           </h2>
-          <div className="flex justify-center mb-6">
-            <svg
-              aria-hidden="true"
-              width="120"
-              height="20"
-              viewBox="0 0 120 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
-                stroke="#d48806"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <p className="text-black text-base md:text-lg leading-relaxed">
-            Rajasthan, the land of royals and vibrant colors, has always been
-            known for its intricate and soulful handicrafts. From carved wooden
-            furniture and block-printed textiles to marble sculptures and blue
-            pottery, every piece reflects the history and spirit of the desert
-            state. Our artisans carry forward these ancient traditions passed
-            down through generations— each product tells a story of culture,
-            passion, and precision.
+          <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand mb-10">
+            Rajasthan, the land of royals and vibrant colors, is home to rich and soulful handicrafts passed down for generations. From blue pottery to hand-carved marble, each item tells a story of heritage and heart.
           </p>
-        </div>
 
-        <div className="mt-20 bg-[#fff3e0] border border-[#3f422d] rounded-3xl py-10 px-6 md:px-16 max-w-6xl mx-auto">
-          {/* <h2 className=" justify-center text-center text-2xl md:text-3xl font-serif text-[#2a1a00] mb-2">Key Milestones</h2> */}
-
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl md:text-4xl font-bold text-black mb-4 font-serif">
-              What Makes Us Special
-            </h2>
-            <div className="flex justify-center mb-6">
-              <svg
-                aria-hidden="true"
-                width="120"
-                height="20"
-                viewBox="0 0 120 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 10H110M60 10L55 5M60 10L65 5M60 10L55 15M60 10L65 15"
-                  stroke="#d48806"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-left font-serif">
-              <div className="flex items-start gap-4">
-                <Paintbrush className="w-8 h-8 text-black" />
+          <div className="space-y-10 border-l-2 border-[#d48806] pl-8 relative">
+            {legacyPoints.map((item, i) => (
+              <div key={i} className="relative flex items-start gap-5 pl-4">
+                <div className="absolute -left-[3rem] top-0 bg-[#d48806] rounded-full p-2">
+                  <item.icon className="w-5 h-5 text-white " />
+                </div>
                 <div>
-                  <h3 className="text-lg font-semibold">
-                    Authentic Craftsmanship
+                  <h3 className="text-lg font-semibold text-[#1c1c1c] font-playfair">
+                    {item.title}
                   </h3>
-                  <p className="text-sm">
-                    Handmade by artisans in Amber, Jaipur—each piece preserves
-                    tradition.
+                  <p className="text-base text-[#3f3f2f] font-quicksand">
+                    {item.desc}
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <Handshake className="w-8 h-8 text-black" />
-                <div>
-                  <h3 className="text-lg font-semibold">
-                    Empowering Communities
-                  </h3>
-                  <p className="text-sm">
-                    Supporting rural livelihoods and promoting fair trade
-                    craftsmanship.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Landmark className="w-8 h-8 text-black" />
-                <div>
-                  <h3 className="text-lg font-semibold">Rooted in Heritage</h3>
-                  <p className="text-sm">
-                    Designs inspired by royal palaces and age-old Rajasthani
-                    traditions.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Leaf className="w-8 h-8 text-black" />
-                <div>
-                  <h3 className="text-lg font-semibold">Eco-Friendly</h3>
-                  <p className="text-sm">
-                    Sustainable materials and natural dyes with minimal
-                    environmental impact.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Globe className="w-8 h-8 text-black" />
-                <div>
-                  <h3 className="text-lg font-semibold">Global Reach</h3>
-                  <p className="text-sm">
-                    Serving customers in 20+ countries with our export-quality
-                    products.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <BadgeCheck className="w-8 h-8 text-black" />
-                <div>
-                  <h3 className="text-lg font-semibold">Trusted Quality</h3>
-                  <p className="text-sm">
-                    Each item is carefully crafted and quality-checked for
-                    excellence.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
-    </div>
-  )
-}
 
-export default LegacySection
+        {/* Right: Carousel */}
+      <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-full flex justify-center items-center group overflow-hidden rounded-xl shadow-lg">
+          <img
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700"
+          />
+
+          {/* Carousel Controls */}
+         
+
+          {/* Dots */}
+          <div className="absolute bottom-4 flex space-x-2">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`w-3 h-3 rounded-full ${
+                  i === currentIndex
+                    ? "bg-[#3f422d]"
+                    : "bg-gray-400 opacity-50"
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default LegacySection;

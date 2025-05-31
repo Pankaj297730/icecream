@@ -8,6 +8,9 @@ import { FaArrowUp } from "react-icons/fa";
 
 import LegacySection from "@/components/ui/LegacySection";
 import AmberSection from "@/components/ui/AmberSection";
+import Explorecraft from "@/components/ui/Explorecraft";
+import BulkOrder from "@/components/Bulkorder";
+import Collections from "@/components/ui/Collections";
 
 
 
@@ -18,6 +21,9 @@ const Home = () => {
       <HeroSection />
       <AmberSection/>
       <LegacySection/>
+      <Explorecraft/>
+      <BulkOrder/>
+           <Collections />
       <GlimpseSection />
 
       <button

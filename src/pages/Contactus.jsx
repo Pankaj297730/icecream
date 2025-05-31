@@ -1,9 +1,12 @@
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const Contactus = () => {
   return (
-    <div className="font-serif text-gray-800">
+    <>
+   <ScrollToTop/>
+    <div className=" bg-[#f9f2ea] text-gray-800">
       {/* Top Bar */}
       <Navbar />
 
@@ -24,7 +27,7 @@ const Contactus = () => {
           {/* Left Content */}
           <div className="md:w-1/2 space-y-6">
             <div className="text-sm text-gray-500 uppercase">We're in Amber, Jaipur</div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-black">Visit Our Showroom</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black font-playfair">Visit Our Showroom</h2>
 
             <div className="flex flex-col sm:flex-row gap-6 border-b border-gray-300 pb-6">
               <div className="sm:w-1/2">
@@ -82,6 +85,7 @@ const Contactus = () => {
 
       <Footer />
     </div>
+     </>
   );
 };
 

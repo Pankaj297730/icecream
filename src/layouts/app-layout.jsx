@@ -6,8 +6,7 @@ return (
       <main>
         <Home/>
        <Footer/>
-          
-           </main> 
+                     </main> 
   ); 
 };
 
