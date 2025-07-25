@@ -2,14 +2,19 @@ import { useState, useEffect, useRef } from "react";
 
 const images = [
   
+  
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1747993373/DSC_5523_bsb0xg.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269082/DSC_9803_yrkshv.jpg",
+    alt: "Skilled Indian woman crafting traditional art",
+  },
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269096/DSC_9924_wbfdj3.jpg",
     alt: "Artisan carved wooden stamp with Indian motifs",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1747993374/DSC_5568_iqbsbf.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269099/DSC_9932_fat98p.jpg",
     alt: "Skilled Indian woman crafting traditional art",
-  },
+  }
 ];
 
 const HeroSection = () => {

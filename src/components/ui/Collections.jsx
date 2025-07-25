@@ -19,7 +19,7 @@ const Collections = () => {
           <div className="grid grid-cols-2 gap-x-20 gap-y-6 text-lg">
             <div>
               <ul>
-                {["Women", "Kids", "Work"].map((item, i) => (
+                {["Handicrafts", "Textiles", "Jewelry"].map((item, i) => (
                   <li
                     key={i}
                     className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"
@@ -31,7 +31,7 @@ const Collections = () => {
             </div>
             <div>
               <ul>
-                {["Men", "Home & Living", "Gifts"].map((item, i) => (
+                {["Blankets", "Home & Living", "Gifts"].map((item, i) => (
                   <li
                     key={i}
                     className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"
@@ -45,11 +45,11 @@ const Collections = () => {
         </div>
 
         {/* Right Content */}
-        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-in">
+        <div className="flex-1 flex flex-col w-[360px] h-[320px] items-center lg:items-start text-center lg:text-left animate-fade-in">
           <img
-            src="https://storage.googleapis.com/a1aa/image/02c55ff7-d42d-4943-4552-cf4405ed6bff.jpg"
+            src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269092/DSC_9846_clxauj.jpg"
             alt="Antique ox cart sculpture"
-            className="w-full max-w-[400px] object-contain rounded shadow-lg transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>

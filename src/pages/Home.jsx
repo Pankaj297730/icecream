@@ -24,7 +24,6 @@ const Home = () => {
       <Explorecraft/>
       <BulkOrder/>
            <Collections />
-      <GlimpseSection />
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

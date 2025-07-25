@@ -7,7 +7,7 @@ const BulkOrder = () => {
          {/* Left Text Content */}
          <div>
           <img
-            src="https://storage.googleapis.com/a1aa/image/c199b659-f389-40ef-f7f9-ce1bce25acae.jpg"
+            src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269088/DSC_9840_bcahb8.jpg"
             alt="Craft sculpture"
             className="w-[360px] h-[320px] object-cover rounded shadow-md"
           />
