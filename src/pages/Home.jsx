@@ -17,7 +17,7 @@ import Collections from "@/components/ui/Collections";
 const Home = () => {
   return (
     <div className="bg-[#f9f2ea]">
-      <Navbar />
+   
       <HeroSection />
       <AmberSection/>
       <LegacySection/>

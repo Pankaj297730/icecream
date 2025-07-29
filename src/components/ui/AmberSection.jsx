@@ -1,12 +1,12 @@
 import React from "react";
-import leafImage from "/Illustrations_by__Agata_Wierzbicka-removebg-preview.png";
+// import leafImage from "/Illustrations_by__Agata_Wierzbicka-removebg-preview.png";
 
 const AmberSection = () => {
   return (
     <section className="relative bg-[#DBD3C785] py-24 px-6 md:px-20 overflow-hidden">
       {/* Right Leaf */}
       <img
-        src={leafImage}
+        src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753614696/Illustrations_by__Agata_Wierzbicka-removebg-preview_omr17l.png"
         alt="right leaf"
         className="absolute right-0 bottom-0 w-[350px] md:w-[500px] pointer-events-none select-none opacity-70"
       />
