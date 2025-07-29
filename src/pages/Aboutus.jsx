@@ -1,7 +1,10 @@
+import Navbar from "@/components/ui/Navbar"
 
 const Aboutus = () => {
   return (
-    <div>Aboutus</div>
+    <div>
+      <Navbar/>
+    </div>
   )
 }
 

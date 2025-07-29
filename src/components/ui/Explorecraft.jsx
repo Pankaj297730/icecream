@@ -43,7 +43,7 @@ const Explorecraft = () => {
   return (
     <section
       ref={sectionRef}
-      className="text-white  relative bg-[url('https://img.freepik.com/premium-photo/abstract-background-design-hd-dark-spring-green-color_851755-36184.jpg?ga=GA1.1.1554648406.1748514457&w=740')] bg-blend-overlay bg-cover py-24 px-6 md:px-20 overflow-hidden"
+      className="text-white  relative bg-[url('https://res.cloudinary.com/dbv77rbsv/image/upload/v1753800615/abstract-background-design-hd-dark-spring-green-color_851755-36184_kxkkhn.webp')] bg-blend-overlay bg-cover py-24 px-6 md:px-20 overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-20">
         {/* Left Text Content */}

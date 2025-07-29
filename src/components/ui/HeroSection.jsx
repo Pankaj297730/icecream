@@ -46,10 +46,10 @@ const HeroSection = () => {
           Rajasthan Small Scale Cottage Industries
         </h1>
       <p className="max-w-[420px] text-base leading-7 font-medium mb-12">
-  Experience a timeless legacy where traditional Indian craftsmanship meets modern innovation. 
-  At R.S.S.C.I, we celebrate the rich heritage of skilled artisans by delivering authentic, 
-  handcrafted excellence with unmatched quality, purpose, and pride. 
-  Every creation tells a story — rooted in culture, powered by skill, and made for the world.
+Our Journey With Rajasthan’s master artisan Spaw’s  Over 35 Proud Years. We have build long bonds rooted in trust, tradition and timeless Craftsmanship.
+                                    Each certain reflect the passion and precision of reneration of skilled hand.
+                                    Together, We celebration the soul of handmade art, covering heritage with every piece.
+
 </p>
 
         <button

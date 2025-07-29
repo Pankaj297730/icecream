@@ -90,8 +90,10 @@ const Footer = () => {
             <ul className="space-y-2 ">
               <li><Link to="#" className="hover:underline">Handicrafts</Link></li>
               <li><Link to="#" className="hover:underline">Textiles</Link></li>
-              <li><Link to="#" className="hover:underline">Jewelry</Link></li>
-              <li><Link to="#" className="hover:underline">Blankets</Link></li>
+              <li><Link to="#" className="hover:underline">Jewellery</Link></li>
+              <li><Link to="#" className="hover:underline">Carpets</Link></li>
+              <li><Link to="#" className="hover:underline">Mojdis</Link></li>
+              <li><Link to="#" className="hover:underline">Paintings</Link></li>
             </ul>
           </div>
 

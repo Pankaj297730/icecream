@@ -22,8 +22,9 @@ const AmberSection = () => {
   Handmade Stories, Crafted with Love
 </h2>
 
-          <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand">
-            Nestled in Amber, RSSCI is a vibrant showroom showcasing the finest handmade treasures. From exquisite jewelry and rich textiles to authentic cottage crafts, each piece tells a story of tradition and craftsmanship. Explore our collection and celebrate the beauty of Indian artisanship with every purchase.
+      <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand">
+            Whispers Of Royal Rajasthan, Where every craft echoes the View legacy of Amer . 
+            Timeless creation inspired by the royal forts, palecs and Artisan of Jaipur Heart.
           </p>
         </div>
 

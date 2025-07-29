@@ -19,7 +19,7 @@ const Collections = () => {
           <div className="grid grid-cols-2 gap-x-20 gap-y-6 text-lg">
             <div>
               <ul>
-                {["Handicrafts", "Textiles", "Jewelry"].map((item, i) => (
+                {["Handicrafts", "Textiles", "Jewellery"].map((item, i) => (
                   <li
                     key={i}
                     className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"
@@ -31,7 +31,7 @@ const Collections = () => {
             </div>
             <div>
               <ul>
-                {["Blankets", "Home & Living", "Gifts"].map((item, i) => (
+                {["Carpets", "Paintings", "Mojdis"].map((item, i) => (
                   <li
                     key={i}
                     className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"

@@ -1,74 +1,100 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 const jewellery_items = [
-  {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753438960/DSC_9942_y5ykhx.jpg",
+
+   {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799683/No_photo_available_4_lmo2ei.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
-    category: "Traditional",
+    category: "Precious & Semi Precious Gem Stone",
   },
-  {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440301/Untitled_design_14_hqawod.webp",
+ {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
-    category: "Gold",
+    category: "Kundan Jewellery",
   },
+ {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440301/DSC_9942_elumyn.webp",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Gold and White Gold Studded Jewellery",
+  },
+
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440303/Untitled_design_16_nvaav7.webp",
-    label: "Meenakari Bangles",
-    alt: "Brightly colored Meenakari bangles with floral patterns",
-    category: "Traditional",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440302/Untitled_design_15_m2mxmd.webp",
+    label: "Rajasthani Necklace",
+    alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
+    category: "Silver Jewellery",
   },
+   {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/v1753798930/Untitled_design_accnst.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Beed Necklaces",
+  },
+ 
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799127/Untitled_design_1_ahy4kj.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Enamuel  Work",
+  },
+    {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799230/No_photo_available_1_xopfqw.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Lac Bangles",
+  },
+  
+
+
 ];
 
 const categories = [
-  {
-    name: "Gold",
-    description: "Luxurious designs crafted in gold, perfect for festive and bridal occasions.",
-  },
-  {
-    name: "Silver",
-    description: "Elegant silver pieces that shine with simplicity and class.",
-  },
-  {
-    name: "Gemstones",
-    description: "Colorful gemstone jewellery that brings out your inner royalty.",
-  },
+  { name: "Precious & Semi Precious Gem Stone", description: "Elegantly cut gems, sparkling with nature's finest colors and energy." },
+  { name: "Kundan Jewellery", description: "Traditional royal beauty crafted in intricate gold and stone setting." },
+  { name: "Gold and White Gold Studded Jewellery", description: "Modern luxury meets tradition in our finely studded gold and white gold pieces." },
+  { name: "Silver Jewellery", description: "Shimmering silver designs that blend ethnic charm with contemporary style." },
+  { name: "Beed Necklaces", description: "Vibrant and colorful beaded strands perfect for adding a folk flair to your look." },
+  { name: "Enamuel  Work", description: "Rich Meenakari art adds colorful life to timeless jewellery." },
+  { name: "Lac Bangles", description: "Bright handcrafted Lac bangles that bring tradition and color to every wrist." },
 ];
 
 const Jewellery = () => {
+  const [activeCategory, setActiveCategory] = useState("Precious & Semi Precious Gem Stone");
   const [jewelleryIndex, setJewelleryIndex] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("Gold");
-  const [hoveredCategory, setHoveredCategory] = useState(null);
 
-  const intervalRef = useRef(null);
+  const filteredItems = jewellery_items.filter(
+    (item) => item.category === activeCategory
+  );
 
-  const handlePrevJewellery = () => {
-    setJewelleryIndex((prev) => (prev === 0 ? jewellery_items.length - 1 : prev - 1));
-  };
+  const activeCategoryData = categories.find((cat) => cat.name === activeCategory);
 
-  const handleNextJewellery = () => {
-    setJewelleryIndex((prev) => (prev === jewellery_items.length - 1 ? 0 : prev + 1));
-  };
+  useEffect(() => {
+    setJewelleryIndex(0);
+  }, [activeCategory]);
 
   return (
-    <div className="text-[#3f4333] font-quicksand py-16 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-32 items-center md:items-start">
-      {/* Left Side */}
-      <div className="md:w-2/4">
-        <h1 className="text-4xl font-extrabold mb-4 leading-tight font-josefin">Jewellery</h1>
-        <p className="text-lg leading-relaxed font-quicksand mb-4">
-          Discover timeless elegance with our curated collection of artisanal jewellery.
-        </p>
+    <div className="text-[#3f4333] font-quicksand py-16 px-4 w-full flex justify-center">
+      <div className="flex flex-col lg:flex-row gap-12 items-start w-full max-w-7xl">
+        
+        {/* Left Content */}
+        <div className="w-full lg:w-1/2 px-4 mt-16">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-4  font-josefin leading-tight">
+            Jewellery Collection
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed mb-6">
+            Discover timeless elegance with our curated collection of artisanal jewellery.
+          </p>
 
-        {/* Category Tabs */}
-        <div className="flex gap-3 mb-6 flex-wrap">
-          {categories.map((category) => (
-            <div key={category.name} className="relative group">
+          {/* Category Buttons */}
+          <div className="flex flex-wrap gap-3 mb-6 ">
+            {categories.map((category) => (
               <button
+                key={category.name}
                 onClick={() => setActiveCategory(category.name)}
-                onMouseEnter={() => setHoveredCategory(category.name)}
-                onMouseLeave={() => setHoveredCategory(null)}
-                className={`px-4 py-2 rounded-full border transition-all ${
+                className={`px-4 py-2 rounded-full border text-sm sm:text-base transition-all ${
                   activeCategory === category.name
                     ? "bg-[#3f4333] text-white"
                     : "border-[#3f4333] text-[#3f4333] hover:bg-[#3f4333] hover:text-[#f7f0e3]"
@@ -76,69 +102,38 @@ const Jewellery = () => {
               >
                 {category.name}
               </button>
-
-              {/* Tooltip Description on Hover */}
-              {hoveredCategory === category.name && (
-                <div className="absolute top-12 left-1/2 -translate-x-1/2 w-64 text-sm bg-[#f7f0e3] text-[#3f4333] p-3 rounded shadow-lg z-10">
-                  {category.description}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <button className="border border-[#3f4333] text-[#3f4333] px-6 py-3 text-base hover:bg-[#3f4333] hover:text-[#f7f0e3] transition-colors duration-300">
-          Shop {activeCategory}
-        </button>
-      </div>
-
-      {/* Right Side - Carousel */}
-      <div className="w-full flex justify-center items-center px-4">
-        <div className="relative w-2/3 max-w-4xl h-[300px] md:h-[320px]">
-          {/* Carousel Image */}
-          {jewellery_items[jewelleryIndex] && (
-            <img
-              src={jewellery_items[jewelleryIndex].src}
-              alt={jewellery_items[jewelleryIndex].alt}
-              className="w-full h-full object-contain rounded-lg transition-all duration-700"
-            />
-          )}
-
-          {/* Label */}
-          {jewellery_items[jewelleryIndex]?.label && (
-            <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 px-4 py-1 rounded-md text-sm md:text-base text-gray-800 font-semibold shadow">
-              {jewellery_items[jewelleryIndex].label}
-            </p>
-          )}
-
-          {/* Controls */}
-          <button
-            onClick={handlePrevJewellery}
-            aria-label="Previous"
-            className="absolute top-1/2 left-4 -translate-y-1/2 text-white text-4xl bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full p-2 shadow-md transition"
-          >
-            ‹
-          </button>
-          <button
-            onClick={handleNextJewellery}
-            aria-label="Next"
-            className="absolute top-1/2 right-4 -translate-y-1/2 text-white text-4xl bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full p-2 shadow-md transition"
-          >
-            ›
-          </button>
-
-          {/* Dots */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {jewellery_items.map((_, i) => (
-              <div
-                key={i}
-                className={`w-3 h-3 rounded-full transition ${
-                  i === jewelleryIndex ? "bg-white" : "bg-gray-400"
-                }`}
-              ></div>
             ))}
           </div>
         </div>
+
+        {/* Right Content */}
+        <div className="w-full lg:w-1/2 px-4 flex justify-center">
+          <div className="w-full max-w-xl flex flex-col items-center">
+            {filteredItems.length > 0 ? (
+              <>
+                <div className="w-full aspect-[3/1] mb-4">
+                  <img
+                    src={filteredItems[jewelleryIndex].src}
+                    alt={filteredItems[jewelleryIndex].alt}
+                    className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                  />
+                </div>
+
+                {activeCategoryData && (
+                  <div className="w-full bg-[#f7f0e3] text-[#3f4333] p-4 rounded-lg shadow">
+                    <h2 className="text-lg font-semibold mb-1">
+                      {activeCategoryData.name}
+                    </h2>
+                    <p className="text-base">{activeCategoryData.description}</p>
+                  </div>
+                )}
+              </>
+            ) : (
+              <p className="text-center text-gray-500">No items in this category.</p>
+            )}
+          </div>
+        </div>
+
       </div>
     </div>
   );

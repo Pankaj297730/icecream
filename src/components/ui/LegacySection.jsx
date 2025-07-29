@@ -75,7 +75,9 @@ const LegacySection = () => {
             A Legacy of Craftsmanship
           </h2>
           <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand mb-10">
-            Rajasthan, the land of royals and vibrant colors, is home to rich and soulful handicrafts passed down for generations. From blue pottery to hand-carved marble, each item tells a story of heritage and heart.
+           Rooted in tradition, Our Crafts breath the soulful Spirits of Rajasthan’s heritage
+Every View tells a breath felt Story of skilled hands, age old cultural and artistic pride.
+
           </p>
 
           <div className="space-y-10 border-l-2 border-[#d48806] pl-8 relative">

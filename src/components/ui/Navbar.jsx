@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Home", "About Us", "Products", "Gallery", "Contact Us"];
+  const navItems = ["Home", "About Us", "Products", "Contact Us"];
 
   return (
     <header className="bg-[#f9f2ea] text-black font-quicksand shadow-lg sticky top-0 z-50">

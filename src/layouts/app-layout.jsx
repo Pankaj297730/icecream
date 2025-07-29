@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 const AppLayout = () => {
 
 return (
+  
       <main>
            <Navbar />
         <Home/>
