@@ -98,7 +98,8 @@ const LegacySection = () => {
         </div>
 
         {/* Right Carousel */}
-        <div className="relative w-full aspect-[4/3] md:aspect-[5/4] lg:aspect-[3/2] overflow-hidden rounded-xl shadow-lg">
+        {/* <div className="relative w-full aspect-[4/3] md:aspect-[5/4] lg:aspect-[3/2] overflow-hidden rounded-xl shadow-lg"> */}
+        <div className="relative w-full h-[450px] sm:h-[350px] md:h-[400px] lg:h-full flex justify-center items-center group overflow-hidden rounded-xl shadow-lg">
           <img
             key={currentIndex}
             src={images[currentIndex].src}
