@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const images = [
   
@@ -52,12 +53,14 @@ Our Journey With Rajasthan’s master artisan Spaw’s  Over 35 Proud Years. We 
 
 </p>
 
-        <button
-          type="button"
-          className="bg-white border border-[#3f422d] hover:bg-[#2a2c1d] hover:text-white px-6 py-3 text-black font-light text-[1rem] transition-colors rounded focus:outline-yellow-400"
-        >
-          Explore Products
-        </button>
+      <Link to="/products">
+  <button
+    type="button"
+    className="bg-white border border-[#3f422d] hover:bg-[#2a2c1d] hover:text-white px-6 py-3 text-black font-light text-[1rem] transition-colors rounded focus:outline-yellow-400"
+  >
+    Explore Products
+  </button>
+</Link>
         <img
           src="https://storage.googleapis.com/a1aa/image/6bec6dc9-a7d9-4e0b-17f8-48a54174d1f1.jpg"
           alt="Faint background image of an Indian woman crafting art"

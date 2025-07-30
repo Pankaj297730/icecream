@@ -7,10 +7,10 @@ import {
 import { Link } from "react-router-dom";
 
 const socialIcons = [
-  { icon: <FaInstagram size={18} />, label: "Instagram", url: "#" },
-  { icon: <FaFacebookF size={18} />, label: "Facebook", url: "#" },
-  { icon: <FaYoutube size={18} />, label: "YouTube", url: "#" },
-  { icon: <FaGoogle size={18} />, label: "Google Business", url: "#" },
+  { icon: <FaInstagram size={18} />, label: "Instagram", url: "https://www.instagram.com/the_.rssci?igsh=ZHo2OTEwZWlreWtm" },
+  { icon: <FaFacebookF size={18} />, label: "Facebook", url: "https://www.facebook.com/profile.php?id=61576581659607" },
+  // { icon: <FaYoutube size={18} />, label: "YouTube", url: "#" },
+  { icon: <FaGoogle size={18} />, label: "Google Business", url: "https://g.co/kgs/qQCQo5D " },
 ];
 
 const Footer = () => {
@@ -72,8 +72,7 @@ const Footer = () => {
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Showroom</h3>
             <ul className="space-y-2">
               <li><Link to="/about-us" className="hover:underline">About Us</Link></li>
-              <li><Link to="#" className="hover:underline">Our Craftsmen</Link></li>
-              <li><Link to="#" className="hover:underline">Visit Amber Showroom</Link></li>
+              <li><Link to="https://www.google.com/maps?ll=26.98997,75.852402&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=10445586376022376521" className="hover:underline">Visit Amber Showroom</Link></li>
             </ul>
           </div>
 
@@ -81,19 +80,21 @@ const Footer = () => {
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Customer Support</h3>
             <ul className="space-y-2">
               <li><Link to="/contact-us" className="hover:underline">Contact Us</Link></li>
-              <li><Link to="#" className="hover:underline">FAQ</Link></li>
+              {/* <li><Link to="#" className="hover:underline">FAQ</Link></li> */}
             </ul>
           </div>
 
           <div>
             <h3 className="uppercase text-sm font-bold tracking-widest mb-3">Collections</h3>
             <ul className="space-y-2 ">
-              <li><Link to="#" className="hover:underline">Handicrafts</Link></li>
-              <li><Link to="#" className="hover:underline">Textiles</Link></li>
-              <li><Link to="#" className="hover:underline">Jewellery</Link></li>
-              <li><Link to="#" className="hover:underline">Carpets</Link></li>
-              <li><Link to="#" className="hover:underline">Mojdis</Link></li>
-              <li><Link to="#" className="hover:underline">Paintings</Link></li>
+           <ul>
+  <li><Link to="/products#handicrafts" className="hover:underline">Handicrafts</Link></li>
+  <li><Link to="/products#textiles" className="hover:underline">Textiles</Link></li>
+  <li><Link to="/products#jewellery" className="hover:underline">Jewellery</Link></li>
+  <li><Link to="/products#carpets" className="hover:underline">Carpets</Link></li>
+  <li><Link to="/products#mojdis" className="hover:underline">Mojdis</Link></li>
+  <li><Link to="/products#paintings" className="hover:underline">Paintings</Link></li>
+</ul>
             </ul>
           </div>
 
@@ -117,27 +118,25 @@ const Footer = () => {
       <hr className="border-gray-300 my-6" />
 
       <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
-        <div className="flex gap-4 mb-4 sm:mb-0">
-          <Link to="#" className="hover:underline">Site Map</Link>
-          <Link to="#" className="hover:underline">Privacy</Link>
-          <Link to="#" className="hover:underline">Terms</Link>
-        </div>
 
         <div className="flex gap-4 items-center">
           <span>© 2025 Rajasthan Small Scale Cottage Industries - RSSCI</span>
 
-          <div className="hidden sm:flex gap-3 ml-4">
-            {socialIcons.map((item, index) => (
-              <Link
-                key={index}
-                to={item.url}
-                aria-label={item.label}
-                className="bg-black border border-black rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition"
-              >
-                <span className="text-white">{item.icon}</span>
-              </Link>
-            ))}
-          </div>
+    <div className="hidden sm:flex gap-3 ml-4">
+  {socialIcons.map((item, index) => (
+    <a
+      key={index}
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={item.label}
+      className="bg-black border border-black rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition"
+    >
+      <span className="text-white">{item.icon}</span>
+    </a>
+  ))}
+</div>
+
         </div>
       </div>
     </footer>

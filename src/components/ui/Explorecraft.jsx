@@ -26,7 +26,7 @@ const Explorecraft = () => {
     if (!visible) return;
 
     let start = 0;
-    const end = 200;
+    const end = 100;
     const duration = 4000; // 2 seconds total
     const increment = end / (duration / 20); // how much to increase every 20ms
 
@@ -58,12 +58,6 @@ const Explorecraft = () => {
           <p className=" text-lg leading-relaxed font-quicksand">
             Discover a world of heritage and handwork at our Amber showroom. Each piece—from intricate handwoven fabrics and gemstone-studded jewelry to clay, wood, and metal crafts—tells the tale of Indian artisanship, rooted in time yet designed for today.
           </p>
-          <button
-          type="button"
-          className="bg-white border mt-6 border-[#3f422d] hover:bg-[#2a2c1d] hover:text-white px-6 py-3 text-black font-light text-[1rem] transition-colors rounded focus:outline-yellow-400"
-        >
-          Explore Products
-        </button>
         </div>
 
         {/* Right Stat Block */}

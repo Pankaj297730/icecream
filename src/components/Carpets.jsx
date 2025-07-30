@@ -56,7 +56,7 @@ const Carpets = () => {
   }, [activeCategory]);
 
   return (
-    <div className="text-[#3f4333] font-quicksand py-16 px-4 w-full flex justify-center">
+    <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
       <div className="flex flex-col lg:flex-row gap-12 items-start w-full max-w-7xl">
         
         {/* Left Content */}

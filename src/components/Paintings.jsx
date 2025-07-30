@@ -8,7 +8,7 @@ const painting_items = [
     category: "Miniature & Traditional Art",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/v1753607246/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753607227370-4981-DSC_9849.JPG",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799515/No_photo_available_3_seotwk.jpg",
     label: "Miniature & Traditional Art 2",
     alt: "Traditional Rajasthani art with nature elements",
     category: "Miniature & Traditional Art",
@@ -53,7 +53,7 @@ const activeCategoryData = React.useMemo(() =>
   };
 
   return (
-    <div className="text-[#3f4333] font-quicksand py-16 px-4 w-full flex justify-center">
+    <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
       <div className="flex flex-col lg:flex-row gap-12 items-start w-full max-w-7xl">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-4 mt-16">

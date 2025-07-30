@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BulkOrder = () => {
   return (
@@ -27,19 +28,22 @@ const BulkOrder = () => {
           </p>
           <div className="flex relative gap-6">
 
-       
+       <Link to="/products">
           <button
             type="button"
             className="hover:bg-white border mt-6 border-[#3f422d] bg-[#2a2c1d] hover:text-black text-white px-6 py-3 font-light text-[1rem] transition-colors rounded focus:outline-yellow-400"
           >
             Explore Products
           </button>
+          </Link>
+     <Link to="/contact-us">
               <button
             type="button"
             className="bg-transparent border mt-6 border-[#3f422d] hover:bg-[#2a2c1d] text-black hover:text-white px-6 py-3 font-light text-[1rem] transition-colors rounded focus:outline-yellow-400"
           >
             Get in touch
           </button>
+          </Link>
              </div>
         </div>
 

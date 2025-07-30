@@ -32,7 +32,7 @@ const AmberSection = () => {
         <div className="flex flex-col gap-14 text-[#1c1c1c] text-center mt-12 md:mt-0 md:text-left md:ml-20">
           <div>
             <p className="font-playfair text-[56px] leading-none font-semibold">
-              21<span className="align-super text-2xl">+</span>
+              35<span className="align-super text-2xl">+</span>
             </p>
             <p className="text-xs tracking-widest uppercase font-quicksand mt-1">Years</p>
           </div>

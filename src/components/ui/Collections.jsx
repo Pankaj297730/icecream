@@ -2,43 +2,55 @@ import React from "react";
 
 const Collections = () => {
   return (
-    <section className="bg-[#faf2e7]  px-6 py-20">
+    <section className="bg-[#faf2e7] px-6 py-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-24 lg:gap-80">
         {/* Left Content */}
         <div className="flex-1 max-w-4xl text-[#1c1c1c]">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-12 mb-12">
             <h1 className="font-serif text-4xl lg:text-5xl font-semibold text-[#1c1c1c] lg:leading-snug">
               Explore our <br />
-              collections
+              collection
             </h1>
-            <button className="px-6 py-2 border border-[#1a1a1a] text-[#1c1c1c] text-base font-medium hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300 ease-in-out rounded shadow-sm">
-              Shop Now
-            </button>
           </div>
 
           <div className="grid grid-cols-2 gap-x-20 gap-y-6 text-lg">
             <div>
               <ul>
-                {["Handicrafts", "Textiles", "Jewellery"].map((item, i) => (
-                  <li
-                    key={i}
-                    className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"
-                  >
-                    {item}
+                <a href="/products#handicrafts">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Handicrafts
                   </li>
-                ))}
+                </a>
+                <a href="/products#textiles">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Textiles
+                  </li>
+                </a>
+                <a href="/products#jewellery">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Jewellery
+                  </li>
+                </a>
               </ul>
             </div>
+
             <div>
               <ul>
-                {["Carpets", "Paintings", "Mojdis"].map((item, i) => (
-                  <li
-                    key={i}
-                    className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer"
-                  >
-                    {item}
+                <a href="/products#carpets">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Carpets
                   </li>
-                ))}
+                </a>
+                <a href="/products#paintings">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Paintings
+                  </li>
+                </a>
+                <a href="/products#mojdis">
+                  <li className="border-b border-[#d6c9b5] py-3 hover:font-semibold hover:pl-1 transition-all duration-200 ease-in-out cursor-pointer">
+                    Mojdis
+                  </li>
+                </a>
               </ul>
             </div>
           </div>

@@ -66,7 +66,7 @@ const LegacySection = () => {
     }, []);
 
   return (
-  <section className="relative bg-[#f9f2ea] py-24 px-6 md:px-20 overflow-hidden">
+  <section className="relative bg-[#f9f2ea] py-24 px-8 md:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-44 items-start">
         {/* Left: Text + Icons */}
         <div>
@@ -100,11 +100,11 @@ Every View tells a breath felt Story of skilled hands, age old cultural and arti
         </div>
 
         {/* Right: Carousel */}
-      <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-full flex justify-center items-center group overflow-hidden rounded-xl shadow-lg">
+      <div className="relative w-full h-[450px] sm:h-[350px] md:h-[400px] lg:h-full flex justify-center items-center group overflow-hidden rounded-xl shadow-lg">
           <img
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
-            className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700"
+            className="w-full h-full object-cover bg-center  rounded-lg shadow-md transition-all duration-700"
           />
 
           {/* Carousel Controls */}
