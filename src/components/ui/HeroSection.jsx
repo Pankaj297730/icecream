@@ -5,15 +5,15 @@ const images = [
   
   
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269082/DSC_9803_yrkshv.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753862377/DSC_9803_g7ut3k.webp",
     alt: "Skilled Indian woman crafting traditional art",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269096/DSC_9924_wbfdj3.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753862413/DSC_9932_jicvjg.webp",
     alt: "Artisan carved wooden stamp with Indian motifs",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269099/DSC_9932_fat98p.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/v1753606500/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753539347757-80519-DSC_9836.jpg",
     alt: "Skilled Indian woman crafting traditional art",
   }
 ];
@@ -62,7 +62,7 @@ Our Journey With Rajasthan’s master artisan Spaw’s  Over 35 Proud Years. We 
   </button>
 </Link>
         <img
-          src="https://storage.googleapis.com/a1aa/image/6bec6dc9-a7d9-4e0b-17f8-48a54174d1f1.jpg"
+          src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753861081/6bec6dc9-a7d9-4e0b-17f8-48a54174d1f1_qrhgad.webp"
           alt="Faint background image of an Indian woman crafting art"
           className="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none select-none"
           aria-hidden="true"

@@ -2,65 +2,94 @@ import React, { useState, useEffect } from "react";
 
 const textile_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Sanganeri Block Prints",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Rajasthani Mirror Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Rajasthani patel Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Bandhani (Tie-Dye)",
   },
-   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Saree’s",
   },
-   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Dress Material & Stiched",
   },
-   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269110/DSC_9911_i2axzt.jpg",
-    label: "Lac Bangles",
-    alt: "Brightly colored Lac bangles with traditional patterns",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753269110/DSC_9911_i2axzt.jpg",
+    label: "Quilt Display",
+    alt: "Traditional Jaipur quilt with floral patterns",
     category: "Jaipur Quits & Blankets",
   },
-   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
-    label: "Lac Bangles",
-    alt: "Brightly colored Lac bangles with traditional patterns",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    label: "Lehariya Fabric",
+    alt: "Wave patterned Lehariya fabric with vibrant rainbow colors",
     category: "Lehariya",
   },
 ];
 
 const categories = [
-  { name: "Sanganeri Block Prints", description: "Delicate Floral motigs hand-blocked with natural byes Soft Cottons." },
-  { name: "Rajasthani Mirror Work", description: "A traditional Rajasthan embroidery Style Where Small mirrors are intricate Streched into vibrant fabrics to helpful light and add Sparkle." },
-  { name: "Rajasthani patel Work", description: "An artistics tealie craft Where colourful tabrie piecas are hand stitched together to creative, bold, eye catching patterns and design." },
-  { name: "Bandhani (Tie-Dye)", description: "Dotted design with bright colours each piece tied and dyed by hand." },
-  { name: "Saree’s", description: "Graceful drapes Showcasing Indians textile artistry and rich culture." },
-  { name: "Lehariya", description: "Wave patterned fabrics dyed in rainbow waves, Perfect for festival Wear." },
-  { name: "Jaipur Quits & Blankets", description: "Wave patterned fabrics dyed in rainbow waves, Perfect for festival Wear." },
-//   { name: "Lehariya", description: "Lightweight yet Warm,Filled with comfort and wrapped in Rajasthan Style." },
-  { name: "Dress Material & Stiched", description: "Unstiched ready to be tailored into elegance pieces in unique prints." },
+  {
+    name: "Sanganeri Block Prints",
+    description: "Delicate floral motifs hand-blocked with natural dyes on soft cottons.",
+  },
+  {
+    name: "Rajasthani Mirror Work",
+    description:
+      "Traditional embroidery style with small mirrors stitched into vibrant fabrics to reflect light and add sparkle.",
+  },
+  {
+    name: "Rajasthani patel Work",
+    description:
+      "Artistic textile craft where colorful fabric pieces are hand-stitched into bold, eye-catching patterns.",
+  },
+  {
+    name: "Bandhani (Tie-Dye)",
+    description: "Dotted designs with bright colors — each piece tied and dyed by hand.",
+  },
+  {
+    name: "Saree’s",
+    description:
+      "Graceful drapes showcasing India's textile artistry and rich cultural heritage.",
+  },
+  {
+    name: "Lehariya",
+    description:
+      "Wave-patterned fabrics dyed in rainbow tones — perfect for festive occasions.",
+  },
+  {
+    name: "Jaipur Quits & Blankets",
+    description:
+      "Lightweight yet warm, filled with comfort and wrapped in traditional Rajasthani style.",
+  },
+  {
+    name: "Dress Material & Stiched",
+    description:
+      "Unstitched or ready-to-wear textiles crafted in unique prints and patterns.",
+  },
 ];
 
 const Textiles = () => {
@@ -71,7 +100,9 @@ const Textiles = () => {
     (item) => item.category === activeCategory
   );
 
-  const activeCategoryData = categories.find((cat) => cat.name === activeCategory);
+  const activeCategoryData = categories.find(
+    (cat) => cat.name === activeCategory
+  );
 
   useEffect(() => {
     setTextileIndex(0);
@@ -80,16 +111,16 @@ const Textiles = () => {
   return (
     <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
       <div className="flex flex-col lg:flex-row gap-12 items-start w-full max-w-7xl">
-        
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-4 mt-16">
-         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 font-josefin leading-tight">
-  Textile Collection
-</h1>
-<p className="text-base md:text-lg leading-relaxed mb-6">
-  Experience the rich heritage of craftsmanship with our exquisite collection of handcrafted textiles — where every thread tells a story of tradition, culture, and timeless beauty.
-</p>
-
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-4 font-josefin leading-tight">
+            Textile Collection
+          </h1>
+          <p className="text-base md:text-lg leading-relaxed mb-6">
+            Experience the rich heritage of craftsmanship with our exquisite
+            collection of handcrafted textiles — where every thread tells a
+            story of tradition, culture, and timeless beauty.
+          </p>
 
           {/* Category Buttons */}
           <div className="flex flex-wrap gap-3 mb-6">
@@ -118,6 +149,9 @@ const Textiles = () => {
                   <img
                     src={filteredItems[TextileIndex].src}
                     alt={filteredItems[TextileIndex].alt}
+                    width="800"
+                    height="266"
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
                   />
                 </div>
@@ -132,11 +166,12 @@ const Textiles = () => {
                 )}
               </>
             ) : (
-              <p className="text-center text-gray-500">No items in this category.</p>
+              <p className="text-center text-gray-500">
+                No items in this category.
+              </p>
             )}
           </div>
         </div>
-
       </div>
     </div>
   );

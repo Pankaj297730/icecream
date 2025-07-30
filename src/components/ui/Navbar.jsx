@@ -11,12 +11,15 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-6 py-0 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img
-            src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1748505666/RSSCI_Logo_Final_blacl-03_1_h5h08x.png"
-            alt="RSSCI Logo"
-            className="h-20 w-auto object-contain"
-            loading="lazy"
-          />
+        <img
+  src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1748505666/RSSCI_Logo_Final_blacl-03_1_h5h08x.png"
+  alt="RSSCI Logo"
+  width="80"
+  height="20"
+  className="object-contain"
+  loading="lazy"
+/>
+
         </Link>
 
         {/* Desktop Navigation */}

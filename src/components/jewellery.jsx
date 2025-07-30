@@ -1,54 +1,48 @@
 import React, { useState, useEffect } from "react";
 
 const jewellery_items = [
-
-   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799683/No_photo_available_4_lmo2ei.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799683/No_photo_available_4_lmo2ei.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Precious & Semi Precious Gem Stone",
   },
- {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799221/No_photo_available_tzguzb.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Kundan Jewellery",
   },
- {
-    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440301/DSC_9942_elumyn.webp",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753440301/DSC_9942_elumyn.webp",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Gold and White Gold Studded Jewellery",
   },
-
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753440302/Untitled_design_15_m2mxmd.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753440302/Untitled_design_15_m2mxmd.webp",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Silver Jewellery",
   },
-   {
-    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/v1753798930/Untitled_design_accnst.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753798930/Untitled_design_accnst.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Beed Necklaces",
   },
- 
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799127/Untitled_design_1_ahy4kj.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799127/Untitled_design_1_ahy4kj.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Enamuel  Work",
   },
-    {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799230/No_photo_available_1_xopfqw.jpg",
+  {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799230/No_photo_available_1_xopfqw.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Lac Bangles",
   },
-  
-
-
 ];
 
 const categories = [
@@ -65,11 +59,8 @@ const Jewellery = () => {
   const [activeCategory, setActiveCategory] = useState("Precious & Semi Precious Gem Stone");
   const [jewelleryIndex, setJewelleryIndex] = useState(0);
 
-  const filteredItems = jewellery_items.filter(
-    (item) => item.category === activeCategory
-  );
-
-  const activeCategoryData = categories.find((cat) => cat.name === activeCategory);
+  const filteredItems = jewellery_items.filter(item => item.category === activeCategory);
+  const activeCategoryData = categories.find(cat => cat.name === activeCategory);
 
   useEffect(() => {
     setJewelleryIndex(0);
@@ -78,10 +69,10 @@ const Jewellery = () => {
   return (
     <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
       <div className="flex flex-col lg:flex-row gap-12 items-start w-full max-w-7xl">
-        
+
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-4 mt-16">
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-4  font-josefin leading-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-4 font-josefin leading-tight">
             Jewellery Collection
           </h1>
           <p className="text-base md:text-lg leading-relaxed mb-6">
@@ -89,8 +80,8 @@ const Jewellery = () => {
           </p>
 
           {/* Category Buttons */}
-          <div className="flex flex-wrap gap-3 mb-6 ">
-            {categories.map((category) => (
+          <div className="flex flex-wrap gap-3 mb-6">
+            {categories.map(category => (
               <button
                 key={category.name}
                 onClick={() => setActiveCategory(category.name)}
@@ -115,6 +106,9 @@ const Jewellery = () => {
                   <img
                     src={filteredItems[jewelleryIndex].src}
                     alt={filteredItems[jewelleryIndex].alt}
+                    loading="lazy"
+                    width="800"
+                    height="266"
                     className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
                   />
                 </div>

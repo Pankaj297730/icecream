@@ -58,11 +58,15 @@ const Collections = () => {
 
         {/* Right Content */}
         <div className="flex-1 flex flex-col w-[360px] h-[320px] items-center lg:items-start text-center lg:text-left animate-fade-in">
-          <img
-            src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269092/DSC_9846_clxauj.jpg"
-            alt="Antique ox cart sculpture"
-            className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105"
-          />
+       <img
+  src="https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753861755/DSC_9846_clxauj_grzcz6.webp"
+  alt="Antique ox cart sculpture"
+  width="800"
+  height="533"
+  loading="lazy"
+  className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-105"
+/>
+
         </div>
       </div>
     </section>

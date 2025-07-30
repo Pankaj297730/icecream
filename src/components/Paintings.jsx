@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 const painting_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/v1753606500/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753539346426-27040-DSC_9836.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/f_auto,w_auto/v1753606500/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753539346426-27040-DSC_9836.webp",
     label: "Miniature & Traditional Art 1",
     alt: "Miniature painting showcasing royal court scenes",
     category: "Miniature & Traditional Art",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753799515/No_photo_available_3_seotwk.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799515/No_photo_available_3_seotwk.jpg",
     label: "Miniature & Traditional Art 2",
     alt: "Traditional Rajasthani art with nature elements",
     category: "Miniature & Traditional Art",
@@ -27,16 +27,15 @@ const Paintings = () => {
   const [activeCategory, setActiveCategory] = useState("Miniature & Traditional Art");
   const [paintingIndex, setPaintingIndex] = useState(0);
 
-const filteredItems = React.useMemo(() => 
-  painting_items.filter(item => item.category === activeCategory),
-  [painting_items, activeCategory]
-);
+  const filteredItems = useMemo(
+    () => painting_items.filter((item) => item.category === activeCategory),
+    [activeCategory]
+  );
 
-const activeCategoryData = React.useMemo(() =>
-  categories.find(cat => cat.name === activeCategory),
-  [categories, activeCategory]
-);
-
+  const activeCategoryData = useMemo(
+    () => categories.find((cat) => cat.name === activeCategory),
+    [activeCategory]
+  );
 
   useEffect(() => {
     setPaintingIndex(0);
@@ -61,8 +60,7 @@ const activeCategoryData = React.useMemo(() =>
             Painting Collection
           </h1>
           <p className="text-base md:text-lg leading-relaxed mb-6">
-            Discover timeless artistry through our curated collection of traditional and folk Rajasthani paintings.
-            Each brushstroke brings to life tales of culture, history, and vibrant expressions.
+            Discover timeless artistry through our curated collection of traditional and folk Rajasthani paintings. Each brushstroke brings to life tales of culture, history, and vibrant expressions.
           </p>
 
           {/* Category Buttons */}
@@ -91,6 +89,9 @@ const activeCategoryData = React.useMemo(() =>
                 <img
                   src={filteredItems[paintingIndex].src}
                   alt={filteredItems[paintingIndex].alt}
+                  loading="lazy"
+                  width="800"
+                  height="266"
                   className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
                 />
 
@@ -100,12 +101,14 @@ const activeCategoryData = React.useMemo(() =>
                     <button
                       onClick={handlePrev}
                       className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full"
+                      aria-label="Previous painting"
                     >
                       ‹
                     </button>
                     <button
                       onClick={handleNext}
                       className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full"
+                      aria-label="Next painting"
                     >
                       ›
                     </button>

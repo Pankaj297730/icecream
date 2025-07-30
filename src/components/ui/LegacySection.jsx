@@ -9,15 +9,15 @@ import {
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753270111/DSC_9649_labl06.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753862490/DSC_9649_slfifq.webp",
     alt: "Handcrafted pouches and cases with traditional Indian prints",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269102/DSC_9938_kb1jev.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/v1753693891/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753692893893-87781-Untitled%20design%20%2819%29.webp",
     alt: "Artisan carved wooden stamp with Indian motifs",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753269099/DSC_9934_tnyopt.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/v1753862496/DSC_9938_tehcm0.webp",
     alt: "Skilled Indian woman crafting traditional art",
   },
 ];
