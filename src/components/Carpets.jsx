@@ -2,44 +2,36 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 
 const carpet_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799851/No_photo_available_6_ymzvgc.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027205/DSC_9887_lygl8w.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Pure Woolen Carpet",
-    width: 1200,
-    height: 400,
   },
+  
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799850/No_photo_available_7_zavdjx.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027205/DSC_9897_vpulxm.jpg",
+    
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Silk Woolen Carpet",
-    width: 1200,
-    height: 400,
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799851/No_photo_available_6_ymzvgc.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027204/DSC_9896_ubyxu7.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Pure Silk Carpet",
-    width: 1200,
-    height: 400,
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799859/No_photo_available_5_yqhi6u.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799859/No_photo_available_5_yqhi6u.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Silk on Silk Carpet",
-    width: 1200,
-    height: 400,
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Modern & Contemporary Carpet",
-    width: 1200,
-    height: 400,
   },
 ];
 
@@ -129,7 +121,7 @@ const Carpets = () => {
                     alt={filteredItems[carpetIndex].alt}
                     width={filteredItems[carpetIndex].width}
                     height={filteredItems[carpetIndex].height}
-                    className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                    className="w-full h-full object-cover rounded-md shadow transition-all duration-75"
                     loading="lazy"
                   />
                 </div>

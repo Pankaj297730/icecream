@@ -24,7 +24,7 @@ const AmberSection = () => {
 
       <p className="text-[#111111] text-lg md:text-lg leading-relaxed font-quicksand">
             Whispers Of Royal Rajasthan, Where every craft echoes the View legacy of Amer . 
-            Timeless creation inspired by the royal forts, palecs and Artisan of Jaipur Heart.
+            Timeless creation inspired by the royal forts, palaces and Artisan of Jaipur Heart.
           </p>
         </div>
 

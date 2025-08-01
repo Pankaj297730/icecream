@@ -38,7 +38,7 @@ const textile_items = [
     category: "Dress Material & Stiched",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753269110/DSC_9911_i2axzt.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_800,q_auto/v1753269110/DSC_9911_i2axzt.jpg",
     label: "Quilt Display",
     alt: "Traditional Jaipur quilt with floral patterns",
     category: "Jaipur Quits & Blankets",

@@ -2,13 +2,13 @@ import React, { useState, useEffect, useMemo } from "react";
 
 const painting_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/f_auto,w_auto/v1753606500/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753539346426-27040-DSC_9836.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754028382/No_photo_available_3_zhvtwv.jpg",
     label: "Miniature & Traditional Art 1",
     alt: "Miniature painting showcasing royal court scenes",
     category: "Miniature & Traditional Art",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799515/No_photo_available_3_seotwk.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754028382/DSC_9836_vyktva.jpg",
     label: "Miniature & Traditional Art 2",
     alt: "Traditional Rajasthani art with nature elements",
     category: "Miniature & Traditional Art",

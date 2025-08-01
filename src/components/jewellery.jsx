@@ -2,43 +2,43 @@ import React, { useState, useEffect } from "react";
 
 const jewellery_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799683/No_photo_available_4_lmo2ei.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754026615/No_photo_available_4_z5vzjs.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Precious & Semi Precious Gem Stone",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Kundan Jewellery",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753440301/DSC_9942_elumyn.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027940/Untitled_design_16_vsabds.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Gold and White Gold Studded Jewellery",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753440302/Untitled_design_15_m2mxmd.webp",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027940/Untitled_design_15_lfjn4q.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Silver Jewellery",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753798930/Untitled_design_accnst.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027940/Untitled_design_keja2z.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Beed Necklaces",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799127/Untitled_design_1_ahy4kj.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799218/Untitled_design_1_kpokx9.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Enamuel  Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799230/No_photo_available_1_xopfqw.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Lac Bangles",
@@ -109,7 +109,7 @@ const Jewellery = () => {
                     loading="lazy"
                     width="800"
                     height="266"
-                    className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                    className="w-full h-full object-cover rounded-md shadow transition-all duration-75"
                   />
                 </div>
 

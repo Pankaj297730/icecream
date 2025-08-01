@@ -2,44 +2,39 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 
 const handicraft_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753800169/No_photo_available_9_dncdom.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754028521/No_photo_available_9_eq3ldn.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Painted cabinet",
-    width: 1200,
-    height: 400,
+  
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Marble inlays",
-    width: 1200,
-    height: 400,
+  
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Carved Sheesham Woods",
-    width: 1200,
-    height: 400,
+  
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753800357/No_photo_available_12_rjt6ce.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753800357/No_photo_available_12_rjt6ce.jpg",
     label: "Marble inlays",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Metal Work",
-    width: 1200,
-    height: 400,
+  
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753800181/No_photo_available_10_i3esc6.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754028523/No_photo_available_10_fqtxhr.jpg",
     label: "Meenakari",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Meenakari",
-    width: 1200,
-    height: 400,
+  
   },
 ];
 
