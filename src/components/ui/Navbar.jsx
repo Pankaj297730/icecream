@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
         <img
-  src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1748505666/RSSCI_Logo_Final_blacl-03_1_h5h08x.png"
+  src="https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_80/v1754040686/RSSCI_Logo_Final_blacl-03_1_h5h08x_1_gydbpf.png"
   alt="RSSCI Logo"
   width="80"
   height="20"

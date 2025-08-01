@@ -60,10 +60,8 @@ const HeroSection = () => {
         <img
           src="https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753861081/6bec6dc9-a7d9-4e0b-17f8-48a54174d1f1_qrhgad.webp"
           alt="Faint background image of an Indian woman crafting art"
-          className="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none select-none"
+          className="absolute inset-0 w-full h-[780px] opacity-15 pointer-events-none select-none"
           aria-hidden="true"
-          width="800"
-          height="800"
         />
       </section>
 

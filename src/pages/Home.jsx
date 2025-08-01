@@ -1,7 +1,4 @@
-import GlimpseSection from "@/components/ui/GlimpseSection";
 import HeroSection from "@/components/ui/HeroSection";
-import Navbar from "@/components/ui/Navbar";
-
 import { FaArrowUp } from "react-icons/fa";
 
 
@@ -23,7 +20,7 @@ const Home = () => {
       <LegacySection/>
       <Explorecraft/>
       <BulkOrder/>
-           <Collections />
+      <Collections />
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
