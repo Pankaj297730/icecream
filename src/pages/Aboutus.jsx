@@ -23,7 +23,7 @@ const Aboutus = () => {
     useEffect(() => {
     const interval = setInterval(() => {
       setsec_2Current((prev) => (prev + 1) %  sec2_carouselImages.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -53,13 +53,14 @@ const Aboutus = () => {
 
           {/* Right Carousel */}
           {/* <div className="md:w-1/2 w-full"> */}
-     <div className="flex-1 flex flex-col w-[400px] h-[380px] rounded-md bg-black items-center lg:items-start text-center lg:text-left animate-fade-in">
-              <img
-                src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1753859843/DSC_5510_rpqk33.jpg"
-                alt="showroom-image "
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
+<div className="flex-1 flex flex-col w-full max-w-[500px] h-[380px] rounded-md bg-black overflow-hidden shadow-lg animate-fade-in">
+  <img
+    src="https://res.cloudinary.com/dbv77rbsv/image/upload/v1754470800/DSC_9643_c7vvd4.jpg"
+    alt="Interior of the showroom"
+    className="w-full h-full object-cover rounded-md transition-transform duration-500 hover:scale-105"
+  />
+</div>
+
           </div>
         {/* </div> */}
       </section>

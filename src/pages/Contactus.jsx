@@ -53,7 +53,7 @@ const Contactus = () => {
                 </div>
                 <div className="sm:w-1/2">
                   <div className="uppercase text-xs font-semibold text-gray-600 mb-1">Phone</div>
-                  <p className="text-sm sm:text-base">+91 98765 43210</p>
+                  <p className="text-sm sm:text-base">+91 98290 62872</p>
                 </div>
               </div>
 

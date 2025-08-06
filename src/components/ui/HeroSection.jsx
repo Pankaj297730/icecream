@@ -1,14 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "react-router-dom";
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753862377/DSC_9803_g7ut3k.webp",
-    alt: "Skilled Indian woman crafting traditional art",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_1600/v1754470955/No_photo_available_13_nqyohl.jpg",
+    alt: "Artisan carved wooden stamp with Indian motifs",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753862413/DSC_9932_jicvjg.webp",
-    alt: "Artisan carved wooden stamp with Indian motifs",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753862377/DSC_9803_g7ut3k.webp",
+    alt: "Skilled Indian woman crafting traditional art",
   },
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/fetch/f_auto,q_auto,w_800/v1753606500/https://kcwvbrzhvttmzjqgaqiz.supabase.co/storage/v1/object/public/plot-images/plot-1753539347757-80519-DSC_9836.jpg",
@@ -17,23 +18,22 @@ const images = [
 ];
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 4000);
-    return () => clearInterval(intervalRef.current);
-  }, []);
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect(); // initial selection
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="flex flex-col md:flex-row min-h-52 bg-[#f7f0e6] m-0 p-0">
@@ -47,7 +47,6 @@ const HeroSection = () => {
           Each creation reflects the passion and precision of generations of skilled hands.
           Together, we celebrate the soul of handmade art, preserving heritage with every piece.
         </p>
-
         <Link to="/products">
           <button
             type="button"
@@ -65,41 +64,52 @@ const HeroSection = () => {
         />
       </section>
 
-      {/* Right Side - Carousel */}
+      {/* Right Side - Embla Carousel */}
       <section className="hidden md:flex justify-center items-center w-full md:w-1/2 bg-[#f7f0e6] py-24 overflow-hidden">
-        <div className="relative w-[90%] md:w-[500px] h-[600px] flex justify-center items-center group">
-          <img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
-            width="500"
-            height="600"
-            loading={currentIndex === 0 ? "eager" : "lazy"}
-            className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700"
-          />
+        <div className="relative w-[90%] lg:w-[550px] md:w-[600px] h-[600px] group">
+          <div className="overflow-hidden h-full rounded-lg" ref={emblaRef}>
+            <div className="flex h-full">
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className="flex-[0_0_100%] w-full h-full relative"
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    width="500"
+                    height="600"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-700"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
-          {/* Carousel Controls */}
+          {/* Navigation Buttons */}
           <button
             aria-label="Previous"
-            onClick={handlePrev}
-            className="absolute top-1/2 left-0 -translate-y-1/2 text-[#3f422d] text-3xl cursor-pointer bg-white bg-opacity-60 hover:bg-opacity-90 rounded-full p-2 transition"
+            onClick={scrollPrev}
+            className="absolute top-1/2 left-2 -translate-y-1/2 text-[#3f422d] text-3xl cursor-pointer bg-white bg-opacity-60 hover:bg-opacity-90 rounded-full p-2 transition"
           >
             ‹
           </button>
           <button
             aria-label="Next"
-            onClick={handleNext}
-            className="absolute top-1/2 right-0 -translate-y-1/2 text-[#3f422d] text-3xl cursor-pointer bg-white bg-opacity-60 hover:bg-opacity-90 rounded-full p-2 transition"
+            onClick={scrollNext}
+            className="absolute top-1/2 right-2 -translate-y-1/2 text-[#3f422d] text-3xl cursor-pointer bg-white bg-opacity-60 hover:bg-opacity-90 rounded-full p-2 transition"
           >
             ›
           </button>
 
           {/* Dots */}
-          <div className="absolute bottom-4 flex space-x-2">
+          <div className="absolute bottom-4 flex space-x-2 justify-center w-full">
             {images.map((_, i) => (
               <div
                 key={i}
                 className={`w-3 h-3 rounded-full ${
-                  i === currentIndex
+                  i === selectedIndex
                     ? "bg-[#3f422d]"
                     : "bg-gray-400 opacity-50"
                 }`}

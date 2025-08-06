@@ -33,7 +33,7 @@ const ProductPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="text-white relative bg-[url('https://img.freepik.com/premium-photo/abstract-background-design-hd-dark-spring-green-color_851755-36184.jpg?ga=GA1.1.1554648406.1748514457&w=740')] bg-blend-overlay bg-cover px-6 md:px-20 overflow-hidden">
+      <div className="text-white relative bg-[url('https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754475752/abstract-background-design-hd-dark-spring-green-color_851755-36184-_1__lhtfyd.webp')] bg-blend-overlay bg-cover px-6 md:px-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-start">
           <div>
             <p className="text-sm uppercase mb-2 tracking-wide text-[#e2dbc8]">Shop By Products</p>

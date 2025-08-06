@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 const painting_items = [
   {
@@ -25,7 +26,6 @@ const categories = [
 
 const Paintings = () => {
   const [activeCategory, setActiveCategory] = useState("Miniature & Traditional Art");
-  const [paintingIndex, setPaintingIndex] = useState(0);
 
   const filteredItems = useMemo(
     () => painting_items.filter((item) => item.category === activeCategory),
@@ -37,19 +37,10 @@ const Paintings = () => {
     [activeCategory]
   );
 
-  useEffect(() => {
-    setPaintingIndex(0);
-  }, [activeCategory]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
-  const handleNext = () => {
-    setPaintingIndex((prev) => (prev + 1) % filteredItems.length);
-  };
-
-  const handlePrev = () => {
-    setPaintingIndex((prev) =>
-      prev === 0 ? filteredItems.length - 1 : prev - 1
-    );
-  };
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
     <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
@@ -85,29 +76,38 @@ const Paintings = () => {
         <div className="w-full lg:w-1/2 px-4 flex flex-col items-center">
           {filteredItems.length > 0 ? (
             <>
-              <div className="w-full aspect-[3/1] mb-4 relative">
-                <img
-                  src={filteredItems[paintingIndex].src}
-                  alt={filteredItems[paintingIndex].alt}
-                  loading="lazy"
-                  width="800"
-                  height="266"
-                  className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
-                />
+              <div className="relative w-full h-full overflow-hidden rounded-lg" ref={emblaRef}>
+                <div className="flex">
+                  {filteredItems.map((item, index) => (
+                    <div
+                      className="flex-none min-w-full h-[220px]  sm:h-[350px] px-2"
+                      key={index}
+                    >
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        width="800"
+                         height="400"
+                        className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
 
-                {/* Carousel Controls */}
+                {/* Embla Controls */}
                 {filteredItems.length > 1 && (
                   <>
                     <button
-                      onClick={handlePrev}
-                      className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full"
+                      onClick={scrollPrev}
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full z-10"
                       aria-label="Previous painting"
                     >
                       ‹
                     </button>
                     <button
-                      onClick={handleNext}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full"
+                      onClick={scrollNext}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full z-10"
                       aria-label="Next painting"
                     >
                       ›
@@ -118,7 +118,7 @@ const Paintings = () => {
 
               {/* Info Box */}
               {activeCategoryData && (
-                <div className="w-full bg-[#f7f0e3] text-[#3f4333] p-4 rounded-lg shadow">
+                <div className="w-full bg-[#f7f0e3] text-[#3f4333] p-4 rounded-lg shadow mt-4">
                   <h2 className="text-lg font-semibold mb-1">
                     {activeCategoryData.name}
                   </h2>

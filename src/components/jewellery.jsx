@@ -8,13 +8,13 @@ const jewellery_items = [
     category: "Precious & Semi Precious Gem Stone",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753440301/DSC_9942_elumyn.webp",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Kundan Jewellery",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027940/Untitled_design_16_vsabds.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754475001/No_photo_available_15_vu5k4h.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Gold and White Gold Studded Jewellery",
@@ -26,7 +26,7 @@ const jewellery_items = [
     category: "Silver Jewellery",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027940/Untitled_design_keja2z.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754474511/No_photo_available_14_uposgc.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Beed Necklaces",
@@ -38,7 +38,7 @@ const jewellery_items = [
     category: "Enamuel  Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754027101/No_photo_available_1_fsjmg4.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Lac Bangles",
@@ -65,6 +65,14 @@ const Jewellery = () => {
   useEffect(() => {
     setJewelleryIndex(0);
   }, [activeCategory]);
+
+  useEffect(() => {
+  jewellery_items.forEach((item) => {
+    const img = new Image();
+    img.src = item.src;
+  });
+}, []);
+
 
   return (
     <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
@@ -102,14 +110,14 @@ const Jewellery = () => {
           <div className="w-full max-w-xl flex flex-col items-center">
             {filteredItems.length > 0 ? (
               <>
-                <div className="w-full aspect-[3/1] mb-4">
+                <div className="w-full h-[220px]  sm:h-[350px] mb-4">
                   <img
                     src={filteredItems[jewelleryIndex].src}
                     alt={filteredItems[jewelleryIndex].alt}
                     loading="lazy"
                     width="800"
                     height="266"
-                    className="w-full h-full object-cover rounded-md shadow transition-all duration-75"
+                    className="w-full h-full object-cover rounded-md shadow"
                   />
                 </div>
 

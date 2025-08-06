@@ -9,14 +9,14 @@ const handicraft_items = [
   
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467741/DSC_9795_jjcty2.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Marble inlays",
   
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754470408/8293ff50-4c11-4dcc-99f4-8516f08ed9b3.png",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Carved Sheesham Woods",
@@ -123,13 +123,13 @@ const Handicrafts = () => {
           <div className="w-full max-w-xl flex flex-col items-center">
             {filteredItems.length > 0 ? (
               <>
-                <div className="w-full aspect-[3/1] mb-4">
+                <div className="w-full h-[220px]  sm:h-[350px] mb-4">
                   <img
                     src={filteredItems[handicraftIndex].src}
                     alt={filteredItems[handicraftIndex].alt}
                     width={filteredItems[handicraftIndex].width}
                     height={filteredItems[handicraftIndex].height}
-                    className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                    className="w-full h-full object-cover rounded-md shadow "
                     loading="lazy"
                   />
                 </div>

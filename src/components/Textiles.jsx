@@ -1,55 +1,49 @@
 import React, { useState, useEffect } from "react";
-
 const textile_items = [
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467725/DSC_0083_oqcsxb.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Sanganeri Block Prints",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467704/DSC_0075_1_qywojk.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Rajasthani Mirror Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754475213/3789043-HSC00001-7_hbvrst.jpg",
     label: "Kundan Earrings",
     alt: "Elegant Kundan earrings with gold plating and red gemstones",
     category: "Rajasthani patel Work",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467729/DSC_0082_aukkem.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Bandhani (Tie-Dye)",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754469694/No_photo_available_dcyrqx.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Saree’s",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
-    label: "Lac Bangles",
-    alt: "Brightly colored Lac bangles with traditional patterns",
-    category: "Dress Material & Stiched",
-  },
-  {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_800,q_auto/v1753269110/DSC_9911_i2axzt.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753269110/DSC_9911_i2axzt.jpg",
     label: "Quilt Display",
     alt: "Traditional Jaipur quilt with floral patterns",
     category: "Jaipur Quits & Blankets",
   },
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,w_auto/v1753799221/No_photo_available_tzguzb.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467736/DSC_0126_qggepl.jpg",
     label: "Lehariya Fabric",
     alt: "Wave patterned Lehariya fabric with vibrant rainbow colors",
     category: "Lehariya",
   },
 ];
+
 
 const categories = [
   {
@@ -85,11 +79,7 @@ const categories = [
     description:
       "Lightweight yet warm, filled with comfort and wrapped in traditional Rajasthani style.",
   },
-  {
-    name: "Dress Material & Stiched",
-    description:
-      "Unstitched or ready-to-wear textiles crafted in unique prints and patterns.",
-  },
+ 
 ];
 
 const Textiles = () => {
@@ -145,14 +135,14 @@ const Textiles = () => {
           <div className="w-full max-w-xl flex flex-col items-center">
             {filteredItems.length > 0 ? (
               <>
-                <div className="w-full aspect-[3/1] mb-4">
+                <div className="w-full h-[220px]  sm:h-[350px] mb-4">
                   <img
                     src={filteredItems[TextileIndex].src}
                     alt={filteredItems[TextileIndex].alt}
                     width="800"
                     height="266"
                     loading="lazy"
-                    className="w-full h-full object-cover rounded-md shadow transition-all duration-500"
+                    className="w-full h-full object-cover rounded-md shadow"
                   />
                 </div>
 
