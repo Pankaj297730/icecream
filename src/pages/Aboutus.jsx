@@ -39,10 +39,10 @@ const Aboutus = () => {
           <div className="md:w-1/2 max-w-2xl text-left">
             <p className="text-base mb-2 uppercase tracking-wide">About Us</p>
             <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-6 md:leading-snug">
-              Rajasthani Small Scale <br /> Cottage Industries
+              Rajasthan Small Scale <br /> Cottage Industries
             </h1>
             <p className="text-lg leading-relaxed">
-              Welcome to Rajasthani Small Scale Cottage Industries — where tradition meets craftsmanship.
+              Welcome to Rajasthan Small Scale Cottage Industries — where tradition meets craftsmanship.
               We are dedicated to preserving the soul of Indian artisanship by bringing you handmade treasures crafted by rural hands.
               <br /><br />
               From vibrant handwoven textiles and gemstone-studded jewellery to time-honored crafts in clay, wood, and metal — each piece reflects Rajasthan’s enduring beauty and cultural depth.
