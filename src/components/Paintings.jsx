@@ -8,12 +8,40 @@ const painting_items = [
     alt: "Miniature painting showcasing royal court scenes",
     category: "Miniature & Traditional Art",
   },
-  {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754028382/DSC_9836_vyktva.jpg",
+      {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755007877/No_photo_available_17_q5hmm2.jpg",
     label: "Miniature & Traditional Art 2",
     alt: "Traditional Rajasthani art with nature elements",
     category: "Miniature & Traditional Art",
   },
+    {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754475213/3789043-HSC00001-7_hbvrst.jpg",
+    label: "Miniature & Traditional Art 2",
+    alt: "Traditional Rajasthani art with nature elements",
+    category: "Miniature & Traditional Art",
+  },
+         {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755010595/DSC_9844_gghqb1.jpg",
+    label: "Miniature & Traditional Art 2",
+    alt: "Traditional Rajasthani art with nature elements",
+    category: "Miniature & Traditional Art",
+  },
+       {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755007879/No_photo_available_16_qjmrnh.jpg",
+    label: "Miniature & Traditional Art 2",
+    alt: "Traditional Rajasthani art with nature elements",
+    category: "Miniature & Traditional Art",
+  },
+
+
+
+  {
+    src: " https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755007878/No_photo_available_19_ytxjtv.jpg",
+    label: "Miniature & Traditional Art 2",
+    alt: "Traditional Rajasthani art with nature elements",
+    category: "Miniature & Traditional Art",
+  },
+  
 ];
 
 const categories = [

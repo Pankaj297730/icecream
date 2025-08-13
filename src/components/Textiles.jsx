@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 const textile_items = [
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467725/DSC_0083_oqcsxb.jpg",
@@ -6,36 +7,81 @@ const textile_items = [
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Sanganeri Block Prints",
   },
+    {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755013596/DSC_0073_yebvy2.jpg",
+    label: "Rajasthani Necklace",
+    alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
+    category: "Sanganeri Block Prints",
+  },
+      {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755013616/DSC_0092_dmabdr.jpg",
+    label: "Rajasthani Necklace",
+    alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
+    category: "Sanganeri Block Prints",
+  },
+      {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755013614/DSC_0096_vbjned.jpg",
+    label: "Rajasthani Necklace",
+    alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
+    category: "Sanganeri Block Prints",
+  },
+  
+
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467704/DSC_0075_1_qywojk.jpg",
     label: "Rajasthani Necklace",
     alt: "Traditional Rajasthani necklace with colorful beads and intricate design",
     category: "Rajasthani Mirror Work",
   },
+  
+
   {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754475213/3789043-HSC00001-7_hbvrst.jpg",
-    label: "Kundan Earrings",
-    alt: "Elegant Kundan earrings with gold plating and red gemstones",
-    category: "Rajasthani patel Work",
-  },
-  {
-    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467729/DSC_0082_aukkem.jpg",
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755014059/DSC_0081_rttrkm.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Bandhani (Tie-Dye)",
   },
+    {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755014082/DSC_0124_fzafud.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Bandhani (Tie-Dye)",
+  },
+   {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755014077/DSC_0079_ogfwxd.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Bandhani (Tie-Dye)",
+  },
+
+  
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754469694/No_photo_available_dcyrqx.jpg",
     label: "Lac Bangles",
     alt: "Brightly colored Lac bangles with traditional patterns",
     category: "Saree’s",
   },
+    {
+    src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755013634/DSC_0131_weemfn.jpg",
+    label: "Lac Bangles",
+    alt: "Brightly colored Lac bangles with traditional patterns",
+    category: "Saree’s",
+  },
+
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1753269110/DSC_9911_i2axzt.jpg",
     label: "Quilt Display",
     alt: "Traditional Jaipur quilt with floral patterns",
     category: "Jaipur Quits & Blankets",
   },
+  
+  {
+    src: "  https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1755014751/DSC_9921_cgmhb0.jpg",
+    label: "Quilt Display",
+    alt: "Traditional Jaipur quilt with floral patterns",
+    category: "Jaipur Quits & Blankets",
+  },
+
   {
     src: "https://res.cloudinary.com/dbv77rbsv/image/upload/f_auto,q_auto,w_800/v1754467736/DSC_0126_qggepl.jpg",
     label: "Lehariya Fabric",
@@ -54,11 +100,6 @@ const categories = [
     name: "Rajasthani Mirror Work",
     description:
       "Traditional embroidery style with small mirrors stitched into vibrant fabrics to reflect light and add sparkle.",
-  },
-  {
-    name: "Rajasthani patel Work",
-    description:
-      "Artistic textile craft where colorful fabric pieces are hand-stitched into bold, eye-catching patterns.",
   },
   {
     name: "Bandhani (Tie-Dye)",
@@ -86,17 +127,38 @@ const Textiles = () => {
   const [activeCategory, setActiveCategory] = useState("Sanganeri Block Prints");
   const [TextileIndex, setTextileIndex] = useState(0);
 
-  const filteredItems = textile_items.filter(
-    (item) => item.category === activeCategory
-  );
 
-  const activeCategoryData = categories.find(
-    (cat) => cat.name === activeCategory
-  );
 
   useEffect(() => {
     setTextileIndex(0);
   }, [activeCategory]);
+  
+    useEffect(() => {
+    textile_items.forEach((item) => {
+      const img = new Image();
+      img.src = item.src;
+    });
+  }, []);
+  
+  
+  
+  
+  const [emblaRef, embla] = useEmblaCarousel({ loop: true });
+  
+  
+    const filteredItems = useMemo(
+      () => textile_items.filter((item) => item.category === activeCategory),
+      [activeCategory]
+    );
+  
+    const activeCategoryData = useMemo(
+      () => categories.find((cat) => cat.name === activeCategory),
+      [activeCategory]
+    );
+  
+    const handleCategoryClick = useCallback((name) => {
+      setActiveCategory(name);
+    }, []);
 
   return (
     <div className="text-[#3f4333] font-quicksand py-6 sm:py-16 px-4 w-full flex justify-center">
@@ -131,37 +193,59 @@ const Textiles = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-1/2 px-4 flex justify-center">
-          <div className="w-full max-w-xl flex flex-col items-center">
-            {filteredItems.length > 0 ? (
-              <>
-                <div className="w-full h-[220px]  sm:h-[350px] mb-4">
+            <div className="w-full lg:w-1/2 px-4 flex justify-center">
+  <div className="w-full max-w-xl flex flex-col items-center">
+    {filteredItems.length > 0 ? (
+      <>
+        {/* Carousel Wrapper */}
+        <div className="relative w-full">
+          <div className="overflow-hidden w-full rounded-md shadow" ref={emblaRef}>
+            <div className="flex">
+              {filteredItems.map((item, index) => (
+                <div className="flex-[0_0_100%]" key={index}>
                   <img
-                    src={filteredItems[TextileIndex].src}
-                    alt={filteredItems[TextileIndex].alt}
-                    width="800"
-                    height="266"
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-[220px] sm:h-[350px] object-cover"
                     loading="lazy"
-                    className="w-full h-full object-cover rounded-md shadow"
                   />
                 </div>
-
-                {activeCategoryData && (
-                  <div className="w-full bg-[#f7f0e3] text-[#3f4333] p-4 rounded-lg shadow">
-                    <h2 className="text-lg font-semibold mb-1">
-                      {activeCategoryData.name}
-                    </h2>
-                    <p className="text-base">{activeCategoryData.description}</p>
-                  </div>
-                )}
-              </>
-            ) : (
-              <p className="text-center text-gray-500">
-                No items in this category.
-              </p>
-            )}
+              ))}
+            </div>
           </div>
+
+          {/* Prev Button */}
+          {/* Navigation Buttons */}
+          <button
+            aria-label="Previous"
+       onClick={() => embla && embla.scrollPrev()}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full z-10"
+          >
+            ‹
+          </button>
+          <button
+            aria-label="Next"
+         onClick={() => embla && embla.scrollNext()}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#3f4333] text-white p-2 rounded-full z-10"
+                
+          >
+            ›
+          </button>
         </div>
+
+        {/* Category Info */}
+        {activeCategoryData && (
+          <div className="w-full bg-[#f7f0e3] text-[#3f4333] p-4 rounded-lg shadow mt-4">
+            <h2 className="text-lg font-semibold mb-1">{activeCategoryData.name}</h2>
+            <p className="text-base">{activeCategoryData.description}</p>
+          </div>
+        )}
+      </>
+    ) : (
+      <p className="text-center text-gray-500">No items in this category.</p>
+    )}
+  </div>
+</div>
       </div>
     </div>
   );

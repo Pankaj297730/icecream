@@ -17,17 +17,12 @@ const Aboutus = () => {
   // const [current, setCurrent] = useState(0);
   const [sec2_current, setsec_2Current] = useState(0);
 
-
-
-
     useEffect(() => {
     const interval = setInterval(() => {
       setsec_2Current((prev) => (prev + 1) %  sec2_carouselImages.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
- 
 
   return (
     <div>
