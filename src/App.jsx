@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './layouts/app-layout'; // Main app layout or page
 
 import './App.css';
-import Aboutus from './pages/Aboutus';
+import AboutUs from './pages/Aboutus';
 import Contactus from './pages/Contactus';
 import ProductPage from './pages/Products';
 
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/about-us', // Add the signup route
-    element: <Aboutus />, // SignUp page component to render
+    element: <AboutUs />, // SignUp page component to render
   },
   {
     path: '/contact-us', // Add the signup route
